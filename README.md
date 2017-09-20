@@ -8,7 +8,7 @@ Lecture notes, assignments, codes, etc. associated with ph2a
 ***
 
 ### Textbooks:
-1. "Vibrations and Waves", by Tony French [https://www.amazon.com/Vibrations-Waves-P-French/dp/8123909144/ref=la_B001HOLITU_1_1?s=books&ie=UTF8&qid=1504219437&sr=1-1](Amazon) 
+1. "Vibrations and Waves", by Tony French ([Amazon](https://www.amazon.com/Vibrations-Waves-P-French/dp/8123909144/ref=la_B001HOLITU_1_1?s=books&ie=UTF8&qid=1504219437&sr=1-1))
 
 
 ***

@@ -3,6 +3,8 @@
 Lecture notes, assignments, codes, etc. associated with ph2a
 ---- from (Caltech - Fall 2017) 
 
+Course Website: https://piazza.com/caltech/fall2017/ph2a/home
+
 [Latest Syllabus/Calendar](https://github.com/rxa254/VibrationsAndWaves/releases/latest/)
 ## Some Useful links on Vibrations and Waves
 

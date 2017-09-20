@@ -18,5 +18,5 @@ deploy:
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     repo: rxa254/VibrationsAndWaves
-    branch: master
+
     

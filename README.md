@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+https://travis-ci.org/rxa254/VibrationsAndWaves.svg?branch=master
 # Vibrations and Waves
 Lecture notes, assignments, codes, etc. associated with ph2a
 ---- from (Caltech - Fall 2017) 

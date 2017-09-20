@@ -2,9 +2,9 @@ sudo: require
 dist: xenial
 language: bash
 before_install:
-- sudo apt-get -qq update
-- sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended
-  texlive-fonts-extra latexmk
+#- sudo apt-get -qq update
+#- sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+- sudo apt-get install latexmk
 script:
 - cd calendar
 - latexmk -pdf *.tex
@@ -13,7 +13,7 @@ deploy:
   api_key:
     secure: XeQf1uQLlFL8Rcnrn0vQFcdpFbp67I6sL7/U7eA9nkCA6XUpCbqDWKflSf+2qrjghYacZLcPQCLhP044/V2lCFQ1EglQY0+1yZ6Phwqz2hXATBDqwVDnDQnGOSafpVVH9kCBB2FfLcRb2TPg0hZal/HHXS/n68pChhJEz72rD4z9Q0QaXiY/GyjPQoSEVbctpgfu0HZUiBru0SZx5KI/Lt2RutjrmfXXScfmaTnU2Yw3eY/K8vJtd+9uvFkE94feefMq5pIijxh+jR7bPnb2hGJQiu+QDcy6j7QXCyajbREyrToVNmYRQIy3jeWnxZYJqhc0xiWOeNoOGNQtvtzGfX8izEKS3iUH7hxRzRz2qmFdX8KlYeF+AX/Yw8eQB4rzBggHAS2ZN3SYZJgdKJiq1Z1KDByOps7KnVvXVBTWlwfI6qajx/rSRWOXWVp+gIoOuwqwYM4I6axHXZZVs9YpSjPNCd2w9M1/cDh2UBmMNrhC9DJvKy9LwRI5gDPiawmsPbxinfZmg8LJa8hpft9T6y3KgIWK4TcpzWRz6NbuooSGOhGWA4nqLxoCJKYrPzJOgy76A1Q3S1vpIiRPPt7AF8uYraeGAOyjXmak95nYkiCUVWRMm0loy8J3Q77HEou3Jc7VAmyqdOEPRoYMtZD99livLhoH2odJlZXIhe3JxPw=
   skip_cleanup: true
-  file: calendar.pdf
+  file: September.pdf
   on:
     repo: rxa254/VibrationsAndWaves
     branch: master

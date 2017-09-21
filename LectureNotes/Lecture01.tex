@@ -1,28 +1,48 @@
 % latex - beamer presentation
 
-\documentclass{beamer}
+\documentclass[pdf]{beamer}
 \usepackage{beamerthemeshadow}
+\mode<presentation>
+  {
+    \usetheme{Berkeley}
+    %\usecolortheme{crane}
+    %\useinnertheme{circles}
+%    \useoutertheme{tree}
+  }
+
+\usepackage{hyperref}
+\hypersetup{
+    pdffitwindow=true,     % window fit to page when opened
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=orange,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
 \begin{document}
-\title{Introduction + Periodic Motion}  
-\author{Rana Adhikari}
-\date{26- Sep-2017}
+\title{Periodic Motion}  
+\author{Caltech: ph2a}
+\date{26 - Sep - 2017}
 
 \frame{\titlepage} 
 
 \frame{\frametitle{Table of contents}\tableofcontents} 
 
 
-\section{Section no.1} 
-\frame{\frametitle{Title} 
-Each frame should have a title.
-}
-\subsection{Subsection no.1.1  }
-\frame{ 
-Without title somethink is missing. 
+\section{Class Overview}
+\frame{\frametitle{Overview}
+\begin{enumerate}
+\item All info on class website: \url{https://piazza.com/caltech/fall2017/ph2a}
+\item Lectures are Tuesday and Thursday
+\item try out different sections; problems solving is key!
+\item Use piazza for group chat / anon discussions, feedback
+\item HWK due every Wed. Quizzes every other Tuesday. Final in Dec.
+\end{enumerate}
 }
 
 
-\section{Section no. 2} 
+\section{Simple Harmonic Oscillator} 
 \subsection{Lists I}
 \frame{\frametitle{unnumbered lists}
 \begin{itemize}
@@ -60,7 +80,7 @@ Without title somethink is missing.
 \end{enumerate}
 }
 
-\section{Section no.3} 
+\section{Differential Equations} 
 \subsection{Tables}
 \frame{\frametitle{Tables}
 \begin{tabular}{|c|c|c|}
@@ -84,7 +104,7 @@ A & B & C \\
 \end{tabular} }
 
 
-\section{Section no. 4}
+\section{Harmonic Oscillator + Complex Math}
 \subsection{blocs}
 \frame{\frametitle{blocs}
 
@@ -101,5 +121,10 @@ bloc text
 bloc text
 \end{alertblock}
 }
+
+
+\section{Damped Harmonic Oscillator}
+
+
 \end{document}
 

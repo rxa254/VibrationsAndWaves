@@ -6,8 +6,7 @@ notifications:
 before_install:
 #- sudo apt-get -qq update
 #- sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra 
-- sudo apt-get install -y texlive-fonts-recommended texlive-fonts-extra
-- sudo apt-get install -y latexmk
+- sudo apt-get install -y --allow-unauthenticated texlive-fonts-recommended texlive-fonts-extra latexmk
 script:
 - cd calendar
 - latexmk -pdf *.tex

@@ -4,14 +4,11 @@
 \usepackage{beamerthemeshadow}
 \mode<presentation>
   {
-    \usefonttheme{structuresmallcapsserif}
-    \usetheme{PaloAlto}
-    %\usecolortheme{seagull}
+    \usetheme{Berkeley}
+    %\usecolortheme{crane}
     %\useinnertheme{circles}
 %    \useoutertheme{tree}
   }
-
-\usepackage{xmpmulti}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -23,14 +20,10 @@
     urlcolor=blue           % color of external links
 }
 
-
-\graphicspath{{Figures/}}
-
 \begin{document}
 \title{Periodic Motion}  
 \author{Caltech: ph2a}
 \date{26 - Sep - 2017}
-%\logo{\includegraphics[height=0.5cm]{../caltech_logo.png}}
 
 \frame{\titlepage} 
 
@@ -45,75 +38,47 @@
 \item try out different sections; problems solving is key!
 \item Use piazza for group chat / anon discussions, feedback
 \item HWK due every Wed. Quizzes every other Tuesday. Final in Dec.
-
 \end{enumerate}
 }
 
 
-\section{Simple Harmonic Oscillator}
-\frame{\frametitle{The Simple Harmonic Oscillator}
-\includegraphics[height=3cm]{Mass-spring-system.png}
-
+\section{Simple Harmonic Oscillator} 
+\subsection{Lists I}
+\frame{\frametitle{unnumbered lists}
 \begin{itemize}
-\item Covered in ph1a (mass-spring, pendulums) \pause
-\item Covered in ph1b/c (RLC Circuits) \pause
-\item Extremely useful in engineering / sciences \pause
-\item ``Just'' the study of 2$^{nd}$ order differential equations
-\end{itemize}
-
+\item Introduction to  \LaTeX  
+\item Course 2 
+\item Termpapers and presentations with \LaTeX 
+\item Beamer class
+\end{itemize} 
 }
 
-\subsection{Demo: Ball on Spring}
-\frame{\frametitle{Interactive Demo}
-\centering
-\includegraphics[height=3cm]{2015416-94550395-2754-sshm.png}
-
-}
-\subsection{General Solution}
-\frame{\frametitle{Harmonic Oscillator Equations}
-\includegraphics[height = 2cm]{Hookeslawb.png} \\ \pause
-$F = m a$ \\ \pause
-$- k x = m \frac{d^2x}{dt^2} $
-}
-
-\frame{\frametitle{Solution I:}
-\begin{align}
-  \onslide<1->{x(t) &= A cos(\omega t) + B sin(\omega t) \\}
-  \onslide<2->{\frac{dx}{dt} &= -\omega A sin(\omega t) + \omega B cos(\omega t) \\}
-  \onslide<3->{\frac{d^2x}{dt^2} &= -\omega^2 \left[A cos(\omega t) + B sin(\omega t)\right] \\}
-                 \onslide<4->{&= -\omega^2 x(t)}
-\end{align}
-\pause
-Therefore, $\omega = \sqrt{k/m}$.
-}
-
-\frame{\frametitle{Solution II:}
-\begin{align}
-  \onslide<1->{x(t) &= D cos(\omega t + \phi_0) \\}
-  \onslide<2->{\frac{dx}{dt} &= -\omega D sin(\omega t + \phi_0) \\}
-  \onslide<3->{\frac{d^2x}{dt^2} &= -\omega^2 D cos(\omega t + \phi_0) \\}
-                 \onslide<4->{&= -\omega^2 x(t)}
-\end{align}
-}
-
-\frame{\frametitle{Boundary Conditions}
-In both cases, there are two free constants (A \& B, or D \& $\phi_0$). \\
-
-These constants are set to force the solution to match any 'Boundary' conditions:
+\frame{\frametitle{lists with pause}
 \begin{itemize}
-\item initial displacement \pause
-\item initial velocity \pause
-\item e.g., mass is released at t=0 with x = x$_0$
-\end{itemize}
-
+\item Introduction to  \LaTeX \pause 
+\item Course 2 \pause 
+\item Termpapers and presentations with \LaTeX \pause 
+\item Beamer class
+\end{itemize} 
 }
 
-\subsection{Damping / Friction}
-%\begin{frame}
-%  \transduration<0-47>{0}
-%  \multiinclude[<+->][format=png, graphics={height=2cm}]{AnimMassSpring/Animated-mass-spring}
-%\end{frame}
-
+\subsection{Lists II}
+\frame{\frametitle{numbered lists}
+\begin{enumerate}
+\item Introduction to  \LaTeX  
+\item Course 2 
+\item Termpapers and presentations with \LaTeX 
+\item Beamer class
+\end{enumerate}
+}
+\frame{\frametitle{numbered lists with pause}
+\begin{enumerate}
+\item Introduction to  \LaTeX \pause 
+\item Course 2 \pause 
+\item Termpapers and presentations with \LaTeX \pause 
+\item Beamer class
+\end{enumerate}
+}
 
 \section{Differential Equations} 
 \subsection{Tables}

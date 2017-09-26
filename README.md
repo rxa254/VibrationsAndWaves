@@ -15,3 +15,8 @@ Course Website: https://piazza.com/caltech/fall2017/ph2a/home
 
 
 ***
+
+### Beamer / Latex resources
+* https://tex.stackexchange.com/questions/105621/beautiful-presentations-done-with-tex-and-related-systems
+* https://latex.simon04.net/
+* https://www.ctan.org/pkg/beamer

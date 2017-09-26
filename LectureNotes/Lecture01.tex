@@ -109,7 +109,8 @@ The Diff Eq we want to solve (for x(t)): $- k x = m \ddot{x}$
                     \onslide<5->{&= -\omega^2 x(t)}
 \end{align*}
 
-\onslide<5->{Therefore, $\omega = \sqrt{k/m}$.}
+\onslide<5->{Therefore, $\omega = \sqrt{k/m}$. Define $\omega_0 \equiv \sqrt{k/m}$}
+
 }
 
 \frame{\frametitle{Solution II:}
@@ -144,7 +145,7 @@ What about adding some frictional damping?
 \pause
 \item Mechanical: $m \ddot{x} + b \dot{x} + k x = 0$
 \pause
-\item Electrical: $L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
+\item Electrical (demo): $L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
 \end{itemize}
 \pause
 
@@ -275,7 +276,34 @@ $x(t) = Re\left\{\tilde{x}(t)\right\} = A cos(\omega t + \phi_o)$
 \section{Damped Harmonic Oscillator}
 \begin{frame}
 \frametitle{Complex approach to damped SHO}
+Use the same approach as before:
+\begin{itemize}
+\item $m \ddot{x} + b \dot{x} + k x = 0$
+\pause
+\item $x(t) = A e^{i (\omega t + \phi_0)}$
+\pause
+\item $-m \omega^2 x + i \omega b x + k x = 0$
+\end{itemize}
+\pause
+Dividing by $m$, we get a quadratic equation for $\omega$: \\
+\pause
+$\omega = \sqrt{\omega_0^2 - (\frac{b}{2 m})^2} + i \frac{b}{2 m}$ \\
+\pause
+Let's call the real part $\omega$ and plug back into the guess for x(t):
+\pause
+$\tilde{x} = A e^{i (\omega t + \phi_0)} e^{-(b/2 m) t}$\\
+\pause
+Taking the real part, we find there is an oscillatory component multiplied by a decaying exponential (the damping): \\
+\pause
+$Re\left\{\tilde{x}\right\} = x = A \cos(\omega t + \phi_o) e^{-(b/2 m) t}$
 
+\end{frame}
+
+\begin{frame}
+\frametitle{Decaying Oscillation}
+
+\centering
+\includegraphics[width=8cm]{damped_sine.png}
 
 \end{frame}
 
@@ -284,6 +312,7 @@ $x(t) = Re\left\{\tilde{x}(t)\right\} = A cos(\omega t + \phi_o)$
 \frametitle{Summary}
 \begin{itemize}
 \item Many physical systems involving small vibrations can be represented as a Simple Harmonic Oscillator.
+\pause
 \item Complex exponentials can be used to solve oscillator problems.
 \pause
 \item Guess solutions; set constants by setting (Dirichlet, Neumann, Cauchy) boundary conditions.

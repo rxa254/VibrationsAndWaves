@@ -5,7 +5,7 @@
 \mode<presentation>
   {
     \usefonttheme{structuresmallcapsserif}
-    \usetheme{Berkeley}
+    \usetheme{PaloAlto}
     \usecolortheme{seagull}
     %\useinnertheme{circles}
 %    \useoutertheme{tree}
@@ -83,38 +83,44 @@
 \includegraphics[height=3cm]{2015416-94550395-2754-sshm.png}
 \begin{itemize}
 \item \url{https://phet.colorado.edu/en/simulation/mass-spring-lab}
-
+\item \url{http://demonstrations.wolfram.com/DrivenDampedOscillator/}
+\item \url{http://demonstrations.wolfram.com/SimpleHarmonicMotionForASpring/}
 \end{itemize}
 \end{frame}
 
 
 \subsection{General Solution}
 \frame{\frametitle{Harmonic Oscillator Equations}
-\includegraphics[height = 2cm]{Hookeslawb.png} \\ \pause
+\centering
+\includegraphics[height = 4cm]{Hookeslawb.png} \\ \pause
 \begin{align*}
-  \onslide<1->{F &= m a \\}
-  \onslide<2->{- k x &= m \frac{d^2x}{dt^2}}
+  \onslide<1->{F &= m \frac{d^2x}{dt^2} \\}
+  \onslide<2->{- k x &= m \ddot{x}}
 \end{align*}
 }
 
 \frame{\frametitle{Solution I:}
-\begin{align}
-  \onslide<1->{x(t) &= A cos(\omega t) + B sin(\omega t) \\}
-  \onslide<2->{\frac{dx}{dt} &= -\omega A sin(\omega t) + \omega B cos(\omega t) \\}
-  \onslide<3->{\frac{d^2x}{dt^2} &= -\omega^2 \left[A cos(\omega t) + B sin(\omega t)\right] \\}
-                    \onslide<4->{&= -\omega^2 x(t)}
-\end{align}
+The Diff Eq we want to solve (for x(t)): $- k x = m \ddot{x}$
+\pause
+\begin{align*}
+  \onslide<2->{x(t) &= A cos(\omega t) + B sin(\omega t) \\}
+  \onslide<3->{\frac{dx}{dt} &= -\omega A sin(\omega t) + \omega B cos(\omega t) \\}
+  \onslide<4->{\frac{d^2x}{dt^2} &= -\omega^2 \left[A cos(\omega t) + B sin(\omega t)\right] \\}
+                    \onslide<5->{&= -\omega^2 x(t)}
+\end{align*}
 
 \onslide<5->{Therefore, $\omega = \sqrt{k/m}$.}
 }
 
 \frame{\frametitle{Solution II:}
-\begin{align}
-  \onslide<1->{x(t) &= D~cos(\omega t + \phi_0) \\}
-  \onslide<2->{\frac{dx}{dt} &= -\omega D sin(\omega t + \phi_0) \\}
-  \onslide<3->{\frac{d^2x}{dt^2} &= -\omega^2 D cos(\omega t + \phi_0) \\}
+Use a phase shift in the cosine instead of sine and cosine:
+\pause
+\begin{align*}
+  \onslide<2->{x(t) &= D~cos(\omega t + \phi_0) \\}
+  \onslide<3->{\frac{dx}{dt} &= -\omega D sin(\omega t + \phi_0) \\}
+  \onslide<4->{\frac{d^2x}{dt^2} &= -\omega^2 D cos(\omega t + \phi_0) \\}
                  \onslide<4->{&= -\omega^2 x(t)}
-\end{align}
+\end{align*}
 }
 
 \frame{\frametitle{Boundary Conditions}
@@ -132,6 +138,19 @@ These constants are set to force the solution to match any 'Boundary' conditions
 \subsection{Damping / Friction}
 \frame{\frametitle{SHO + Damping}
 What about adding some frictional damping?
+\pause
+\begin{itemize}
+\item Friction = force proportional to velocity
+\pause
+\item Mechanical: $m \ddot{x} + b \dot{x} + k x = 0$
+\pause
+\item Electrical: $L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
+\end{itemize}
+\pause
+
+\begin{block}{Damping}
+Resistance is the electrical equivalent of friction.
+\end{block}
 
 \pause
 \centering
@@ -209,7 +228,7 @@ $m \ddot{x} + b \dot{x} + k x =  F_0 sin(\omega t)$
 \frametitle{Euler's Formula}
 
 \begin{block}{\href{http://mathworld.wolfram.com/EulerFormula.html}{Euler's Formula}}
-$e^{i \phi} = cos \phi + i sin \phi$
+$e^{i \phi} = \cos{\phi} + \mathrm{i} \sin{\phi}$
 \end{block}
 \pause
 \includegraphics[width=3cm]{Euler-formula.png}
@@ -219,6 +238,8 @@ $e^{i \phi} = cos \phi + i sin \phi$
 \pause
 \item $1 + e^{i \pi} = 0$
 \end{itemize}
+
+Mesmerizing GIF: \url{http://i.imgur.com/BI1zPwO.gif}
 
 \end{frame}
 

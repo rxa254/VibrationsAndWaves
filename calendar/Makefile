@@ -5,6 +5,7 @@ all: September
 
 September: %: %.tex
 	latexmk -pdf $@
+	pdfcrop September.pdf September.pdf
 
 .PHONY: clean
 

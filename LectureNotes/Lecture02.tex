@@ -1,0 +1,275 @@
+% Lecture for ph2a Caltech 2017: Vibrations and Waves
+\documentclass[pdf,hideothersubsections]{beamer}
+\usepackage{beamerthemeshadow}
+\mode<presentation>
+  {
+    \usefonttheme{structuresmallcapsserif}
+    \usetheme{PaloAlto}
+    \usecolortheme{seagull}
+    %\useinnertheme{circles}
+%    \useoutertheme{tree}
+  }
+
+\usepackage{xmpmulti}
+
+\usepackage{hyperref}
+\hypersetup{
+    pdffitwindow=true,     % window fit to page when opened
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=orange,          % color of internal links (change box color with linkbordercolor)
+    citecolor=green,        % color of links to bibliography
+    filecolor=magenta,      % color of file links
+    urlcolor=blue           % color of external links
+}
+
+% Fonts/encoding
+\renewcommand{\UrlFont}{\scriptsize}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[sc,medium,raggedright]{titlesec}
+\usepackage{newtxmath}
+%\usepackage{libertine}
+\usepackage[osf]{ebgaramond}
+
+\graphicspath{{Figures/}}
+
+\begin{document}
+\title{Superposition}  
+\author{Caltech: ph2a}
+\date{28 - Sep - 2017}
+%\logo{\includegraphics[height=0.5cm]{../caltech_logo.png}}
+
+\frame{\titlepage} 
+
+\frame{\frametitle{Table of contents}\tableofcontents} 
+
+\section{Previous Summary}
+\begin{frame}
+\frametitle{Tuesday}
+\begin{itemize}
+\item Many physical systems involving small vibrations can be represented as a Simple Harmonic Oscillator.
+
+\item Complex exponentials can be used to solve oscillator problems.
+
+\item Guess solutions; set constants by setting (Dirichlet, Neumann, Cauchy) boundary conditions.
+
+\item Imaginary part of the complex frequency corresponds to damping.
+\end{itemize}
+\end{frame}
+
+
+\section{Damped Harmonic Oscillator}
+\begin{frame}
+\frametitle{Complex approach to damped SHO}
+Use the same approach as before:
+\begin{itemize}
+\item $L \ddot{Q} + R \dot{Q} + Q/C = 0$
+\pause
+\item $\tilde{Q}(t) = A e^{i (\omega t + \phi_0)}$
+\pause
+\item $-L \omega^2 \tilde{Q} + i \omega R \tilde{Q} + \tilde{Q}/C = 0$
+\end{itemize}
+\pause
+Dividing by $L$, we get a quadratic equation for $\omega$: \\
+\pause
+\begin{center}
+$\omega = \sqrt{\omega_0^2 - \Big(\frac{R}{2 L}\Big)^2} + i \frac{R}{2 L}$ \\
+\end{center}
+\pause
+Let's call the real part $\omega$ and plug back into the guess for x(t):
+\pause
+\begin{center}
+$\tilde{x} = A e^{i (\omega t + \phi_0)} e^{-(R/2 L) t}$\\
+\end{center}
+\pause
+We can define the time constant: $\tau \equiv 2 L/R$, so that: \\
+\pause
+Taking the real part, we find the solution as before (with the damping): \\
+\pause
+\begin{center}
+$Re\left\{\tilde{Q}\right\} = Q = A \cos(\omega t + \phi_o) e^{-t/\tau}$
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Decaying Oscillation}
+
+\centering
+\includegraphics[width=8cm]{damped_sine.png}
+
+\end{frame}
+
+
+\subsection{Demo: Ball on Spring}
+\begin{frame}
+\frametitle{Interactive Demo}
+\centering
+\includegraphics[height=3cm]{2015416-94550395-2754-sshm.png}
+\begin{itemize}
+\item \url{https://phet.colorado.edu/en/simulation/mass-spring-lab}
+\item \url{http://demonstrations.wolfram.com/DrivenDampedOscillator/}
+\item \url{http://demonstrations.wolfram.com/SimpleHarmonicMotionForASpring/}
+\end{itemize}
+\end{frame}
+
+
+\subsection{Applying Boundary Conditions}
+
+\frame{\frametitle{Boundary Conditions}
+In both cases, there are two free constants (A \& B, or D \& $\phi_0$). \\
+\pause
+These constants are set to force the solution to match any 'Boundary' conditions: \pause
+\begin{itemize}
+\item initial displacement \pause
+\item initial velocity \pause
+\item e.g., mass is released at t=0 with x = x$_0$
+\end{itemize}
+
+}
+
+\frame{\frametitle{Boundary Conditions: Example}
+
+
+
+}
+
+
+
+\subsection{Damping / Friction}
+\frame{\frametitle{SHO + Damping}
+What about adding some frictional damping?
+\pause
+\begin{itemize}
+\item Friction = force proportional to velocity
+\pause
+\item Mechanical: $m \ddot{x} + b \dot{x} + k x = 0$
+\pause
+\item Electrical (demo): $L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
+\end{itemize}
+\pause
+
+\begin{block}{Damping}
+Resistance is the electrical equivalent of friction.
+\end{block}
+
+\pause
+\centering
+\includegraphics[width=5cm]{damped_sine.png}
+}
+
+
+
+
+\frame{\frametitle{Diff Eq Examples}
+\begin{block}{Harmonic Oscillator: Damped mass on spring}
+a \emph{linear}, 2$^{nd}$ order, ordinary differential equation \\
+$m \ddot{x} + b \dot{x} + k x = 0$
+\end{block}
+\pause
+\begin{exampleblock}{Harmonic Oscillator: RLC Circuit}
+a \emph{linear}, 2$^{nd}$ order, ordinary differential equation \\
+$L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
+\end{exampleblock}
+\pause
+\begin{alertblock}{Driven Harmonic Oscillator}
+a \emph{linear}, 2$^{nd}$ order, ordinary differential equation \\
+$m \ddot{x} + b \dot{x} + k x =  F_0 sin(\omega t)$
+\end{alertblock}
+
+}
+
+
+\section{Harmonic Oscillator + Complex Math}
+\subsection{Complex Numbers}
+\frame{\frametitle{Complex Numbers}
+\begin{itemize}
+\item See \href{https://piazza.com/caltech/fall2017/ph2a/resources}{Handout} on complex numbers on course website.
+\pause
+\item Differing notations: $i = \sqrt{-1}$ or $(j = \sqrt{-1})$
+\pause
+\item Complex Variables: 
+\end{itemize}
+\pause
+
+\begin{align*}
+  \onslide<3->{\tilde{z} &= x + i y \\}
+  \onslide<4->{        &= Re\left\{\tilde{z}\right\} + i\,Im\left\{\tilde{z}\right\} \\}
+  \onslide<5->{\tilde{z}^{*} &= x - i y (\rm complex~conjugate)}
+\end{align*}
+
+\begin{align*}
+  \onslide<6->{|\tilde{z}|^2 &= \tilde{z}^{*}\tilde{z} \\}
+  \onslide<7->{              &= (x + i y)(x - i y) \\}
+  \onslide<8->{              &= x^2 + y^2 }
+\end{align*}
+}
+
+
+\subsection{Euler's Formula}
+\begin{frame}
+\frametitle{Euler's Formula}
+
+\begin{block}{\href{http://mathworld.wolfram.com/EulerFormula.html}{Euler's Formula}}
+$e^{i \phi} = \cos{\phi} + \mathrm{i} \sin{\phi}$
+\end{block}
+\pause
+\includegraphics[width=3cm]{Euler-formula.png}
+\pause
+\begin{itemize}
+\item $|e^{i \phi}| = 1$
+\pause
+\item $1 + e^{i \pi} = 0$
+\end{itemize}
+
+Mesmerizing GIF: \url{http://i.imgur.com/BI1zPwO.gif}
+
+\end{frame}
+
+\subsection{Complex Solutions to SHO}
+\begin{frame}
+\frametitle{Complex Solutions}
+\begin{itemize}
+\item Complex exponentials make D.E. solving much easier
+\pause
+\item Actual displacement is not imaginary; this is book-keeping
+\pause
+\end{itemize}
+Guess: $\tilde{x}(t) = A e^{i (\omega t + \phi_0)}$ \\
+\pause
+$\ddot{x} = -(k/m) x$ \\
+\pause
+$\dot{x} = i \omega x$ \\
+\pause
+$\ddot{x} = -\omega^2 x$ \\
+Plug in the guess into the differential equation:
+\begin{align*}
+-\omega^2 x &= (-k/m) x \\
+\omega &= \sqrt{k/m} \\
+x(t) &= A e^{i (\sqrt{k/m} t + \phi_0)}
+\end{align*}
+\pause
+Taking the real part, we get: \\
+\pause
+$x(t) = Re\left\{\tilde{x}(t)\right\} = A cos(\omega t + \phi_o)$
+
+\end{frame}
+
+
+\section{Summary}
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+\item Many physical systems involving small vibrations can be represented as a Simple Harmonic Oscillator.
+\pause
+\item Complex exponentials can be used to solve oscillator problems.
+\pause
+\item Guess solutions; set constants by setting (Dirichlet, Neumann, Cauchy) boundary conditions.
+\pause
+\item Imaginary part of the complex frequency corresponds to damping.
+\end{itemize}
+\end{frame}
+
+\end{document}
+

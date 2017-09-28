@@ -1,18 +1,16 @@
-% latex - beamer presentation
-
+% Lecture for ph2a Caltech 2017: Vibrations and Waves
 \documentclass[pdf,hideothersubsections]{beamer}
 \usepackage{beamerthemeshadow}
 \mode<presentation>
   {
     \usefonttheme{structuresmallcapsserif}
-    \usetheme{PaloAlto}
+    \usetheme{Berkeley}
     \usecolortheme{seagull}
     %\useinnertheme{circles}
 %    \useoutertheme{tree}
   }
 
 \usepackage{xmpmulti}
-
 
 \usepackage{hyperref}
 \hypersetup{
@@ -23,8 +21,6 @@
     filecolor=magenta,      % color of file links
     urlcolor=blue           % color of external links
 }
-
-
 
 % Fonts/encoding
 \renewcommand{\UrlFont}{\scriptsize}
@@ -280,9 +276,9 @@ Use the same approach as before:
 \begin{itemize}
 \item $m \ddot{x} + b \dot{x} + k x = 0$
 \pause
-\item $x(t) = A e^{i (\omega t + \phi_0)}$
+\item $\tilde{x}(t) = A e^{i (\omega t + \phi_0)}$
 \pause
-\item $-m \omega^2 x + i \omega b x + k x = 0$
+\item $-m \omega^2 \tilde{x} + i \omega b \tilde{x} + k \tilde{x} = 0$
 \end{itemize}
 \pause
 Dividing by $m$, we get a quadratic equation for $\omega$: \\

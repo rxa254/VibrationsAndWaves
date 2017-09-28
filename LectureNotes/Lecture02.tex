@@ -10,6 +10,7 @@
 %    \useoutertheme{tree}
   }
 
+\usepackage{svg}
 \usepackage{xmpmulti}
 
 \usepackage{hyperref}
@@ -97,7 +98,7 @@ $Re\left\{\tilde{Q}\right\} = Q = A \cos(\omega t + \phi_o) e^{-t/\tau}$
 \frametitle{Decaying Oscillation}
 
 \centering
-\includegraphics[width=8cm]{damped_sine.png}
+\includegraphics[width=\textwidth]{damped_sine.png}
 
 \end{frame}
 
@@ -106,7 +107,7 @@ $Re\left\{\tilde{Q}\right\} = Q = A \cos(\omega t + \phi_o) e^{-t/\tau}$
 \begin{frame}
 \frametitle{Black Hole Vibrations: Yesterday's Press Release}
 \centering
-\includegraphics[width=9cm]{GW170814-TF.jpg}
+\includegraphics[width=\textwidth]{GW170814-TF.jpg}
 
 \begin{itemize}
    \item \url{https://www.ligo.caltech.edu/video/ligo20160211v10}
@@ -197,21 +198,32 @@ glass fibers as pendula\footnotemark.
 \subsection{Analysis}
 \begin{frame}
 \frametitle{Construct the Diff. Eq.}
-\begin{enumerate}
-\item The motion of a pendulum is \emph{rotational}, rather than translational, so instead of $F = m a$, we use $\tau = I \ddot{\theta}$, where $\tau$ is the torque on the pendulum bob, and $\theta$ is the angle of the pendulum wire w.r.t. the local direction of gravity. \\
+\begin{columns}[T]
+
+  \begin{column}{0.3\textwidth}
+     \includegraphics[width=\textwidth]{Simple_pendulum_generalized_coordinates.pdf}
+
+  \end{column}
 \pause
-\item In the case of a point mass rotating around an origin, $I = m r^2$. \\
-\pause
-\item The torque is the cross product of the Force and the lever arm: $\vec{\tau} = \vec{r} \times \vec{F}$, so: \\
-\end{enumerate}
-\pause
-\begin{align*}
+  \begin{column}{0.7\textwidth}
+  \begin{enumerate}
+  \item Motion of pendulum is \emph{rotational}, not translational, so instead of $F = m a$, use $\tau = I \ddot{\theta}$, where $\tau$ is the torque, and $\theta$ is the angle of the pendulum wire. \\
+    \pause
+  \item In the case of a point mass rotating around an origin, $I = m r^2$. \\
+    \pause
+  \item The torque is the cross product of the Force and the lever arm: $\vec{\tau} = \vec{r} \times \vec{F}$, so: \\
+  \end{enumerate}
+  \pause
+  \begin{align*}
 I \ddot{\theta} &= \vec{r} \times \vec{F} \\
 m L^2 \ddot{\theta} &= -m g L \sin{\theta} \\
 \ddot{\theta} &= -\frac{g}{L} \sin{\theta} \\
-\end{align*}
-\pause
-Ugh - sine is not a linear function...
+  \end{align*}
+  %\pause
+  %Ugh - sine is not a linear function...
+  \end{column}
+
+\end{columns}
 
 \end{frame}
 \subsection{Simulation}
@@ -230,7 +242,7 @@ Ugh - sine is not a linear function...
 
 \subsection{Linearized Solution}
 \begin{frame}
-\frametitle{Linearizing the Pendulum}
+\frametitle{Linearizing the Pendulum: I}
 \begin{itemize}
 \item In many physical situations (not just black holes), the restoring force is not linear; i.e. the potential energy is not just quadratic.
 \pause
@@ -253,16 +265,14 @@ $F = - k_{eff} x$
 
 
 \begin{frame}
-\frametitle{Linearizing the Pendulum}
+\frametitle{Linearizing the Pendulum: II}
 Equation for the frictionless pendulum:
 \begin{align*}
-\ddot{\theta} &= -\frac{g}{L} \sin{\theta} \\
-              &\simeq -\frac{g}{L} \Big[\theta - \frac{\theta^3}{3 !} + \ldots \Big] \\
-              &\simeq -\frac{g}{L} \theta
+\onslide<1->{\ddot{\theta} &= -\frac{g}{L} \sin{\theta} \\}
+\onslide<2->{  &\simeq -\frac{g}{L} \Big[\theta - \frac{\theta^3}{3 !} + \ldots \Big] \\}
+\onslide<3->{  &\simeq -\frac{g}{L} \theta}
 \end{align*}
-\pause
-Which has the same form as SHO equation for the mass-spring and RLC systems.
-
+\onslide<4-> {Which has the same form as SHO equation for the mass-spring and RLC systems and so, as before, $\tilde{\theta} = A e^{i (\omega t + \phi_0)}$
 
 \end{frame}
 

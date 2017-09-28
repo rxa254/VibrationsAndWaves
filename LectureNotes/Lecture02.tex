@@ -23,7 +23,7 @@
 }
 
 % Fonts/encoding
-\renewcommand{\UrlFont}{\scriptsize}
+\renewcommand{\UrlFont}{\tiny}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage[sc,medium,raggedright]{titlesec}
@@ -58,7 +58,7 @@
 \end{frame}
 
 
-\section{Damped Harmonic Oscillator}
+\section{Damped Electrical Circuit}
 \begin{frame}
 \frametitle{Complex approach to damped SHO}
 Use the same approach as before:
@@ -70,7 +70,7 @@ Use the same approach as before:
 \item $-L \omega^2 \tilde{Q} + i \omega R \tilde{Q} + \tilde{Q}/C = 0$
 \end{itemize}
 \pause
-Dividing by $L$, we get a quadratic equation for $\omega$: \\
+Dividing by $L \tilde{Q}$, we get a quadratic equation for $\omega$: \\
 \pause
 \begin{center}
 $\omega = \sqrt{\omega_0^2 - \Big(\frac{R}{2 L}\Big)^2} + i \frac{R}{2 L}$ \\
@@ -102,15 +102,16 @@ $Re\left\{\tilde{Q}\right\} = Q = A \cos(\omega t + \phi_o) e^{-t/\tau}$
 \end{frame}
 
 
-\subsection{Demo: Ball on Spring}
+\subsection{Damped Oscillations of a Black Hole}
 \begin{frame}
-\frametitle{Interactive Demo}
+\frametitle{Black Hole Vibrations: Yesterday's Press Release}
 \centering
-\includegraphics[height=3cm]{2015416-94550395-2754-sshm.png}
+\includegraphics[width=9cm]{GW170814-TF.jpg}
+
 \begin{itemize}
-\item \url{https://phet.colorado.edu/en/simulation/mass-spring-lab}
-\item \url{http://demonstrations.wolfram.com/DrivenDampedOscillator/}
-\item \url{http://demonstrations.wolfram.com/SimpleHarmonicMotionForASpring/}
+   \item \url{https://www.ligo.caltech.edu/video/ligo20160211v10}
+   %\item \url{http://demonstrations.wolfram.com/DrivenDampedOscillator/}
+   %\item \url{http://demonstrations.wolfram.com/SimpleHarmonicMotionForASpring/}
 \end{itemize}
 \end{frame}
 
@@ -135,140 +136,150 @@ These constants are set to force the solution to match any 'Boundary' conditions
 
 }
 
+\section{Sum of Vibrations}
+\subsection{Two Vibrations}
+
+\subsection{Many vibrations with random phase}
+
+\subsection{Acoustic Beats}
 
 
-\subsection{Damping / Friction}
-\frame{\frametitle{SHO + Damping}
-What about adding some frictional damping?
-\pause
-\begin{itemize}
-\item Friction = force proportional to velocity
-\pause
-\item Mechanical: $m \ddot{x} + b \dot{x} + k x = 0$
-\pause
-\item Electrical (demo): $L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
-\end{itemize}
-\pause
-
-\begin{block}{Damping}
-Resistance is the electrical equivalent of friction.
-\end{block}
-
-\pause
-\centering
-\includegraphics[width=5cm]{damped_sine.png}
-}
-
-
-
-
-\frame{\frametitle{Diff Eq Examples}
-\begin{block}{Harmonic Oscillator: Damped mass on spring}
-a \emph{linear}, 2$^{nd}$ order, ordinary differential equation \\
-$m \ddot{x} + b \dot{x} + k x = 0$
-\end{block}
-\pause
-\begin{exampleblock}{Harmonic Oscillator: RLC Circuit}
-a \emph{linear}, 2$^{nd}$ order, ordinary differential equation \\
-$L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
-\end{exampleblock}
-\pause
-\begin{alertblock}{Driven Harmonic Oscillator}
-a \emph{linear}, 2$^{nd}$ order, ordinary differential equation \\
-$m \ddot{x} + b \dot{x} + k x =  F_0 sin(\omega t)$
-\end{alertblock}
-
-}
-
-
-\section{Harmonic Oscillator + Complex Math}
-\subsection{Complex Numbers}
-\frame{\frametitle{Complex Numbers}
-\begin{itemize}
-\item See \href{https://piazza.com/caltech/fall2017/ph2a/resources}{Handout} on complex numbers on course website.
-\pause
-\item Differing notations: $i = \sqrt{-1}$ or $(j = \sqrt{-1})$
-\pause
-\item Complex Variables: 
-\end{itemize}
-\pause
-
-\begin{align*}
-  \onslide<3->{\tilde{z} &= x + i y \\}
-  \onslide<4->{        &= Re\left\{\tilde{z}\right\} + i\,Im\left\{\tilde{z}\right\} \\}
-  \onslide<5->{\tilde{z}^{*} &= x - i y (\rm complex~conjugate)}
-\end{align*}
-
-\begin{align*}
-  \onslide<6->{|\tilde{z}|^2 &= \tilde{z}^{*}\tilde{z} \\}
-  \onslide<7->{              &= (x + i y)(x - i y) \\}
-  \onslide<8->{              &= x^2 + y^2 }
-\end{align*}
-}
-
-
-\subsection{Euler's Formula}
+\section{The Pendulum}
 \begin{frame}
-\frametitle{Euler's Formula}
+\frametitle{Pendula}
 
-\begin{block}{\href{http://mathworld.wolfram.com/EulerFormula.html}{Euler's Formula}}
-$e^{i \phi} = \cos{\phi} + \mathrm{i} \sin{\phi}$
-\end{block}
-\pause
-\includegraphics[width=3cm]{Euler-formula.png}
-\pause
-\begin{itemize}
-\item $|e^{i \phi}| = 1$
-\pause
-\item $1 + e^{i \pi} = 0$
-\end{itemize}
+\begin{columns}[T]
+   \begin{column}{0.5\textwidth}
+    The LIGO detectors which were used to detect those black hole signals, use lasers and mirrors\footnotemark to detect those tiny vibrations in the space-time continuum. To isolate the mirrors from the ground motion, the mirrors are hung with 
+glass fibers as pendula\footnotemark.
 
-Mesmerizing GIF: \url{http://i.imgur.com/BI1zPwO.gif}
+   \end{column}
+
+   \pause
+   \begin{column}{0.5\textwidth}
+   \includegraphics[height=6cm]{LIGO-Pendulum-diagram.png}      
+
+   %\pause
+   %\includegraphics[height=4cm]{LIGO-Mirror.jpg}      
+   \end{column}
+  
+\end{columns}
+\footnotetext[1]{\url{https://www.ligo.caltech.edu/video/ligo20170216v}}
+ \footnotetext[2]{\url{https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/harmonic-motion/v/pendulum}}
 
 \end{frame}
 
-\subsection{Complex Solutions to SHO}
 \begin{frame}
-\frametitle{Complex Solutions}
-\begin{itemize}
-\item Complex exponentials make D.E. solving much easier
-\pause
-\item Actual displacement is not imaginary; this is book-keeping
-\pause
-\end{itemize}
-Guess: $\tilde{x}(t) = A e^{i (\omega t + \phi_0)}$ \\
-\pause
-$\ddot{x} = -(k/m) x$ \\
-\pause
-$\dot{x} = i \omega x$ \\
-\pause
-$\ddot{x} = -\omega^2 x$ \\
-Plug in the guess into the differential equation:
-\begin{align*}
--\omega^2 x &= (-k/m) x \\
-\omega &= \sqrt{k/m} \\
-x(t) &= A e^{i (\sqrt{k/m} t + \phi_0)}
-\end{align*}
-\pause
-Taking the real part, we get: \\
-\pause
-$x(t) = Re\left\{\tilde{x}(t)\right\} = A cos(\omega t + \phi_o)$
+\frametitle{Pendula}
+
+\begin{columns}[T]
+   \begin{column}{0.5\textwidth}
+    The LIGO detectors which were used to detect those black hole signals, use lasers and mirrors\footnotemark 
+to detect those tiny vibrations in the space-time continuum. To isolate the mirrors from the ground motion, the mirrors are hung with 
+glass fibers as pendula\footnotemark.
+
+   \end{column}
+
+   \pause
+   \begin{column}{0.5\textwidth}
+   %\includegraphics[height=6cm]{LIGO-Pendulum-diagram.png}      
+
+   %\pause
+   \includegraphics[height=4cm]{LIGO-Mirror.jpg}      
+   \end{column}
+  
+\end{columns}
+\footnotetext[1]{\url{https://www.ligo.caltech.edu/video/ligo20170216v}}
+ \footnotetext[2]{\url{https://www.khanacademy.org/science/physics/mechanical-waves-and-sound/harmonic-motion/v/pendulum}}
 
 \end{frame}
 
+\subsection{Analysis}
+\begin{frame}
+\frametitle{Construct the Diff. Eq.}
+\begin{enumerate}
+\item The motion of a pendulum is \emph{rotational}, rather than translational, so instead of $F = m a$, we use $\tau = I \ddot{\theta}$, where $\tau$ is the torque on the pendulum bob, and $\theta$ is the angle of the pendulum wire w.r.t. the local direction of gravity. \\
+\pause
+\item In the case of a point mass rotating around an origin, $I = m r^2$. \\
+\pause
+\item The torque is the cross product of the Force and the lever arm: $\vec{\tau} = \vec{r} \times \vec{F}$, so: \\
+\end{enumerate}
+\pause
+\begin{align*}
+I \ddot{\theta} &= \vec{r} \times \vec{F} \\
+m L^2 \ddot{\theta} &= -m g L \sin{\theta} \\
+\ddot{\theta} &= -\frac{g}{L} \sin{\theta} \\
+\end{align*}
+\pause
+Ugh - sine is not a linear function...
+
+\end{frame}
+\subsection{Simulation}
+\begin{frame}
+\frametitle{Numerically Solve the Pendulum Problem}
+\begin{itemize}
+\item $\ddot{\theta} = -\frac{g}{L} \sin{\theta}$
+\pause
+\item $\dot{\theta} = \int_{t_1}^{t_1 + \delta t} \ddot{\theta}(u) du $
+\pause
+\item $\theta = \int_{t_1}^{t_1 + \delta t} \dot{\theta}(u) du $
+\pause
+\item Interactive Demo: \url{https://phet.colorado.edu/en/simulation/pendulum-lab}
+\end{itemize}
+\end{frame}
+
+\subsection{Linearized Solution}
+\begin{frame}
+\frametitle{Linearizing the Pendulum}
+\begin{itemize}
+\item In many physical situations (not just black holes), the restoring force is not linear; i.e. the potential energy is not just quadratic.
+\pause
+\item Luckily, many interesting and useful analyses can be done by linearization:
+\pause
+\item Assume that: (1) The potential exists, (2) We're analyzing the equilibrium position, and (3) we care only about small motions around equilibrium.
+\end{itemize}
+\pause
+
+\begin{block}{Taylor Series expansion} 
+$V(x) = V(0) + V'(0) x + \frac{1}{2} V''(0) x^2 + \ldots$
+\end{block}
+\pause
+
+Equilibrium $\Rrightarrow V'(0) = 0$, \& $F = -\frac{dV}{dx}$, so...
+\pause
+$F = - k_{eff} x$
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Linearizing the Pendulum}
+Equation for the frictionless pendulum:
+\begin{align*}
+\ddot{\theta} &= -\frac{g}{L} \sin{\theta} \\
+              &\simeq -\frac{g}{L} \Big[\theta - \frac{\theta^3}{3 !} + \ldots \Big] \\
+              &\simeq -\frac{g}{L} \theta
+\end{align*}
+\pause
+Which has the same form as SHO equation for the mass-spring and RLC systems.
+
+
+\end{frame}
 
 \section{Summary}
 \begin{frame}
 \frametitle{Summary}
-\begin{itemize}
-\item Many physical systems involving small vibrations can be represented as a Simple Harmonic Oscillator.
+\begin{enumerate}
+\item For linear systems, the resultant of two vibrations is just their sum.
 \pause
-\item Complex exponentials can be used to solve oscillator problems.
+\item Summation of two oscillations with same period but different phase can be solved by vector addition of their complex phasors.
 \pause
-\item Guess solutions; set constants by setting (Dirichlet, Neumann, Cauchy) boundary conditions.
+\item Sum of two oscillations with different frequencies leads to \emph{beats}.
 \pause
-\item Imaginary part of the complex frequency corresponds to damping.
-\end{itemize}
+\item 
+\pause
+\item 
+\end{enumerate}
 \end{frame}
 
 \end{document}

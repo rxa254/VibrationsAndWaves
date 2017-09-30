@@ -4,8 +4,8 @@ language: bash
 notifications:
   email: false
 before_install:
-#- sudo apt-get -qq update
-#- sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra 
+- sudo apt-get -qq update
+#- sudo apt-get install -y texlive-base texlive-latex-base texlive-latex-extra
 - sudo apt-get install -y --allow-unauthenticated texlive-fonts-recommended texlive-fonts-extra latexmk
 script:
 - cd calendar
@@ -20,6 +20,7 @@ deploy:
   skip_cleanup: true
   file: calendar/September.pdf
   file: LectureNotes/Lecture01.pdf
+  file: LectureNotes/Lecture02.pdf
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     repo: rxa254/VibrationsAndWaves

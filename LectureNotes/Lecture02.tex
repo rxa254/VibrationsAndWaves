@@ -138,11 +138,40 @@ These constants are set to force the solution to match any 'Boundary' conditions
 }
 
 \section{Sum of Vibrations}
+\begin{frame}
+\frametitle{Adding sinusoids}
+Addition of two sinusoidal signals can be handled by vector addition of complex \emph{phasors}.
+\pause
+\begin{columns}[T]
+  \begin{column}{0.5\textwidth}
+    \begin{centering}
+      \includegraphics[width=4cm]{RotatingVectors2.png}
+    \end{centering}
+  \end{column}
+  \pause
+  \begin{column}{0.5\textwidth}
+    \begin{centering}
+      \includegraphics[width=4cm]{phasoraddition1a.png}
+    \end{centering}
+  \end{column}
+
+\end{columns}
+
+\end{frame}
+
 \subsection{Two Vibrations}
+\begin{frame}
+\frametitle{Two Sine Waves}
 
-\subsection{Many vibrations with random phase}
+\begin{itemize}
+\item Different Phases (demo)
+\item Different Frequencies (demo)
+\end{itemize}
 
-\subsection{Acoustic Beats}
+\end{frame}
+%\subsection{Many vibrations with random phase}
+
+%\subsection{Acoustic Beats}
 
 
 \section{The Pendulum}
@@ -252,7 +281,7 @@ m L^2 \ddot{\theta} &= -m g L \sin{\theta} \\
 \end{itemize}
 \pause
 
-\begin{block}{Taylor Series expansion} 
+\begin{block}{Taylor Series expansion: Ch.1 (Eq. 1-9)} 
 $V(x) = V(0) + V'(0) x + \frac{1}{2} V''(0) x^2 + \ldots$
 \end{block}
 \pause
@@ -272,7 +301,7 @@ Equation for the frictionless pendulum:
 \onslide<2->{  &\simeq -\frac{g}{L} \Big[\theta - \frac{\theta^3}{3 !} + \ldots \Big] \\}
 \onslide<3->{  &\simeq -\frac{g}{L} \theta}
 \end{align*}
-\onslide<4-> {Which has the same form as SHO equation for the mass-spring and RLC systems and so, as before, $\tilde{\theta} = A e^{i (\omega t + \phi_0)}$
+\onslide<4-> {Which has the same form as SHO equation for the mass-spring and RLC systems and so, as before, $\tilde{\theta} = A e^{i (\omega t + \phi_0)}$}
 
 \end{frame}
 
@@ -286,11 +315,12 @@ Equation for the frictionless pendulum:
 \pause
 \item Sum of two oscillations with different frequencies leads to \emph{beats}.
 \pause
-\item 
+\item Many non-linear systems can be analyzed by linearization.
 \pause
-\item 
+\item Beating is apparent in physical systems even without non-linearity.
 \end{enumerate}
 \end{frame}
+
 
 \end{document}
 

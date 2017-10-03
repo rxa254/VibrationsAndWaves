@@ -96,15 +96,16 @@ $Re\left\{\tilde{Q}\right\} = Q = A \cos(\omega t + \phi_o) e^{-t/\tau}$
 \subsection{Classes of Damping}
 \begin{frame}
 \frametitle{Under, Over, \& Critical Damping}
-
+The complex angular frequency of the oscillator:
+\pause
 \begin{center}
 $\omega = \sqrt{\omega_0^2 - \Big(\frac{R}{2 L}\Big)^2} + i \frac{R}{2 L}$ \\
 \end{center}
 \pause
 \begin{block}{Definitions}
-Under: $\omega_0^2 > \Big(\frac{R}{2 L}\Big)^2$ \\
-Critical: $\omega_0^2 = \Big(\frac{R}{2 L}\Big)^2$ \\
-Over: $\omega_0^2 < \Big(\frac{R}{2 L}\Big)^2$
+Under: $\Big(\frac{R}{2 L}\Big)^2 < \omega_0^2$ \\
+Critical: $\Big(\frac{R}{2 L}\Big)^2 = \omega_0^2$ \\
+Over: $\Big(\frac{R}{2 L}\Big)^2 > \omega_0^2$
 \end{block}
 
 
@@ -115,7 +116,7 @@ Over: $\omega_0^2 < \Big(\frac{R}{2 L}\Big)^2$
 \begin{frame}
 \frametitle{The Quality Factor: I}
 
-\begin{block}{Definition}
+\begin{block}{Definition I:}
 $Q \equiv 2 \pi \frac{\rm energy~stored}{\rm energy~dissipated~per~cycle}$
 \end{block}
 
@@ -125,19 +126,45 @@ $Q \equiv 2 \pi \frac{\rm energy~stored}{\rm energy~dissipated~per~cycle}$
 \frametitle{Decaying Oscillation}
 
 \centering
-\includegraphics[width=0.5\textwidth]{damped_sine_wave.pdf}
+\includegraphics[width=0.75\textwidth]{damped_sine_wave.pdf}
 
 \end{frame}
 
 \begin{frame}
 \frametitle{The Quality Factor: II}
 
+\begin{block}{Definition II:}
+$Q \equiv \frac{\omega_R}{\Delta \omega}$
+\end{block}
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{The Quality Factor: Examples}
+
+Quality Factors of some common household items:
+\begin{table}
+\centering
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{|l|c|r|}
+      \hline
+    Item Name                     & Frequency (Hz)  & Quality Factor \\ \hline
+    Rubber Stopper                       & 10       & 0.5      \\
+    Church Bell (Cologne)                & 330      & 1500     \\
+    Stop Sign (hit with a rubber mallet) & 200      & 1000     \\
+    ${}_0S_0$ Dilational Mode of the Earth     & 0.0008   & 3000     \\
+    75 mm silicon wafer                  & 800      & 50,000   \\
+    Large, High Purity Glass             & 3000     & 10$^8$   \\ \hline
+    \end{tabular}}
+\end{table}
+
 
 
 \end{frame}
 
 
-\subsection{Energy of Oscillators}
+\section{Energy of Oscillators}
 \begin{frame}
 \frametitle{Kinetic and Potential Energy}
 

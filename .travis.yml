@@ -22,6 +22,7 @@ deploy:
   file: LectureNotes/Lecture01.pdf
   file: LectureNotes/Lecture02.pdf
   file: LectureNotes/Lecture03.pdf
+  file: LectureNotes/Lecture04.pdf
   github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
     repo: rxa254/VibrationsAndWaves

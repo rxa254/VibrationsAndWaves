@@ -4,12 +4,12 @@
 \mode<presentation>
   {
     \usefonttheme{structuresmallcapsserif}
-    \usetheme{Berkeley}
-    \usecolortheme{seagull}
-    %\useinnertheme{circles}
-%    \useoutertheme{tree}
+    \usetheme{CambridgeUS}
+    \usecolortheme{seahorse}
+
   }
 
+\usepackage{svg}
 \usepackage{xmpmulti}
 
 \usepackage{hyperref}
@@ -23,7 +23,7 @@
 }
 
 % Fonts/encoding
-\renewcommand{\UrlFont}{\scriptsize}
+\renewcommand{\UrlFont}{\tiny}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage[sc,medium,raggedright]{titlesec}
@@ -43,6 +43,7 @@
 
 \frame{\frametitle{Table of contents}\tableofcontents} 
 
+\setbeamerfont{footnote}{size=\tiny}
 
 \section{Class Overview}
 \frame{\frametitle{Overview}
@@ -141,7 +142,7 @@ What about adding some frictional damping?
 \pause
 \item Mechanical: $m \ddot{x} + b \dot{x} + k x = 0$
 \pause
-\item Electrical (demo): $L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
+\item Electrical (demo): $L \ddot{q} + R \dot{q} + (1/C) q = 0$
 \end{itemize}
 \pause
 
@@ -183,7 +184,7 @@ $m \ddot{x} + b \dot{x} + k x = 0$
 \pause
 \begin{exampleblock}{Harmonic Oscillator: RLC Circuit}
 a \emph{linear}, 2$^{nd}$ order, ordinary differential equation \\
-$L \ddot{Q} + R \dot{Q} + (1/C) Q = 0$
+$L \ddot{q} + R \dot{q} + (1/C) q = 0$
 \end{exampleblock}
 \pause
 \begin{alertblock}{Driven Harmonic Oscillator}

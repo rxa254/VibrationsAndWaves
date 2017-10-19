@@ -1,5 +1,5 @@
 % Lecture for ph2a Caltech 2017: Vibrations and Waves
-\documentclass[pdf, hideothersubsections]{beamer}
+\documentclass[pdf, handout, hideothersubsections]{beamer}
 \usepackage{beamerthemeshadow}
 \mode<presentation>
   {
@@ -89,7 +89,7 @@
   \begin{column}{0.4\textwidth}
     \includegraphics[width=0.85\textwidth]{StringFixedEnds.jpg}
     \pause
-    \includegraphics[width=0.85\textwidth]{StringForceDiagram.png}
+    \includegraphics[width=0.85\textwidth]{StringForceDiagram.pdf}
    
 each segment has a mass, $m = \mu \Delta x$.
 \pause
@@ -116,7 +116,7 @@ each segment has a mass, $m = \mu \Delta x$.
 \begin{columns}
   \begin{column}{0.5\textwidth}
     \centering
-    \includegraphics[width=0.85\textwidth]{StringForceDiagram.png}
+    \includegraphics[width=0.75\textwidth]{StringForceDiagram.pdf}
 \pause
     \begin{align*}
       \action<+->{m \ddot{y}_p &= T_+ - T_- \\}
@@ -131,11 +131,16 @@ each segment has a mass, $m = \mu \Delta x$.
 
 \begin{column}{0.5\textwidth}
     \centering
-    \includegraphics[width=0.85\textwidth]{3masses4springs.png}
+    \includegraphics[width=\textwidth]{3mass4spring.pdf}
     \pause
     \begin{align*}
       m \ddot{x}_p &= F_+ - F_- \\
                    &= k (x_{p + 1} - x_{p}) - k (x_{p} - x_{p-1}) \\
+      \\
+      \\
+      \\
+      \\
+      \\
         \ddot{x}_p &= \omega_0^2 (x_{p+1} - 2 x_p + x_{p-1})  
     \end{align*}
 
@@ -150,7 +155,7 @@ each segment has a mass, $m = \mu \Delta x$.
 
   \begin{column}{0.4\textwidth}
     \centering
-    \includegraphics[width=0.85\textwidth]{StringForceDiagram.png}
+    \includegraphics[width=0.85\textwidth]{StringForceDiagram.pdf}
 
   \end{column}
 
@@ -236,7 +241,7 @@ $ \frac{\partial^2 y}{\partial t^2} = \frac{T}{\mu} \frac{\partial^2 y}{\partial
 sin(k x) 
 \end{alignat}
 \pause
-where the velocity of the wave, $v \equiv \frac{T}{\mu}$,
+where the velocity of the wave, $v \equiv \sqrt{\frac{T}{\mu}}$,
 $\frac{\omega}{2 \pi}$ is the frequency, and $k \equiv \omega / v$ is
 called the 'wave number'. For the wavelength of the wave, we use the
 symbol $\lambda \equiv \frac{2 \pi}{k}$.
@@ -248,19 +253,43 @@ symbol $\lambda \equiv \frac{2 \pi}{k}$.
 \pause
 Let's apply some boundary conditions ! \\
 \pause
-$f(x) = 0$ for $x \in \{0, L\} \implies$ \\
+\begin{enumerate}
+\item $f(x) = 0$ for $x \in \{0, L\} \implies$ \\
 \pause
-$sin(k L) = 0$ for any and all t,\\
+\item $sin(k L) = 0$ for any and all t,\\
 \pause
-so $k_n L = n \pi$ or $k_n = n \frac{\pi}{L}$ \\
+\item so $k_n L = n \pi$ or $k_n = n \frac{\pi}{L}$ \\
 \pause
-and $y(x, t) = A_n cos(\omega_n t) sin(k_n x)$ \\
-
-add plots here
-
+\item and $y(x, t) = A_n cos(\omega_n t) sin(k_n x)$ \\
+\end{enumerate}
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Normal Modes of a String}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+
+\begin{itemize}
+\item Wavelength:  $\lambda_n = \frac{2 L}{n}$
+
+\item Frequency:  $f_n = \frac{v}{\lambda_n}$
+
+\item Velocity:  $v = \sqrt{\frac{T}{\mu}}$
+
+\item $f_n = \frac{n}{2 L} \sqrt{\frac{T}{\mu}}$
+\end{itemize}
+
+\end{column}
+
+\begin{column}{0.5\textwidth}
+
+\centering
+\includegraphics[width=0.5\textwidth]{stationary-waves-7-638.jpg}
+
+\end{column}
+\end{columns}
+\end{frame}
 
 \section{Summary}
 \begin{frame}

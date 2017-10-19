@@ -7,9 +7,10 @@ mpl.use('Agg')
 
 import matplotlib.pyplot as plt
 plt.style.use('seaborn-paper')
-plt.style.use('fivethirtyeight')
+#plt.style.use('fivethirtyeight')
+#plt.style.use('bmh')
 import numpy as np
-
+from scipy import signal
 
 mpl.rcParams.update({'text.usetex': True,
                      'lines.linewidth': 1.5,
@@ -32,30 +33,43 @@ mpl.rcParams.update({'text.usetex': True,
 
 
 
-t = np.linspace(-3.5, 5.5, 900)
+t = np.linspace(-0.25, 1.1, 333)
 
 def sumsines(t, n):
     g = 0 * np.ones_like(t)
     for p in range(1, n):
         #print p
         m = 2*p - 1
-        g += 2/(m * np.pi) * np.sin(m * t)
+        g += 4/(m * np.pi) * np.sin(m*2*np.pi * t)
 
     return g
 
-fig = plt.figure()
+fig = plt.figure(3)
 
-for k in (2, 3, 11, 31, 101):
+plt.plot(t, signal.square(t*2*np.pi), lw=4, alpha=0.3)
+for k in (2, 3, 4, 5):
     #print('k = ' + str(k))
     plt.plot(t, sumsines(t, k), alpha=0.5, rasterized=True, label='n = ' + str(k-1))
 
 
 
-plt.xlabel('Time [s]')
+plt.xlabel('Distance [L]')
 #plt.ylabel('Magnitude Response [m/N]')
 plt.title('Fourier Series Approximation of Square Wave')
 plt.grid(True)
 plt.legend()
 plt.savefig("FourierSquareWave.pdf", bbox_inches='tight')
 
+fig = plt.figure(33)
+plt.plot(t, signal.square(t*2*np.pi))
+for k in (2, 3, 11, 51):
+    #print('k = ' + str(k))
+    plt.plot(t, sumsines(t, k), alpha=0.5, rasterized=True, label='n = ' + str(k-1))
 
+
+plt.xlabel('Distance [L]')
+#plt.ylabel('Magnitude Response [m/N]')
+plt.title('Fourier Series Approximation of Square Wave')
+plt.grid(True)
+plt.legend()
+plt.savefig("FourierSquareWave50.pdf", bbox_inches='tight')

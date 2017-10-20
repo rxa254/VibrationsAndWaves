@@ -60,11 +60,14 @@ plt.grid(True)
 plt.legend()
 plt.savefig("FourierSquareWave.pdf", bbox_inches='tight')
 
+
+# this is a plot with more Fourier components
 fig = plt.figure(33)
 plt.plot(t, signal.square(t*2*np.pi))
 for k in (2, 3, 11, 51):
     #print('k = ' + str(k))
-    plt.plot(t, sumsines(t, k), alpha=0.5, rasterized=True, label='n = ' + str(k-1))
+    plt.plot(t, sumsines(t, k),
+        alpha=0.5, rasterized=True, label='n = ' + str(k-1))
 
 
 plt.xlabel('Distance [L]')
@@ -73,3 +76,17 @@ plt.title('Fourier Series Approximation of Square Wave')
 plt.grid(True)
 plt.legend()
 plt.savefig("FourierSquareWave50.pdf", bbox_inches='tight')
+
+
+fig = plt.figure(39)
+
+m = np.arange(1, 20)
+A = 4/(m * np.pi)
+plt.semilogy(m, A, alpha=0.5, marker='o', rasterized=True)
+plt.xlabel('1/Wavelength [1/L]')
+plt.xticks(m)
+plt.ylabel('$|A|$')
+plt.title('Spectrum of Square Wave')
+plt.grid(True)
+#plt.legend()
+plt.savefig("FourierSquareWavePSD.pdf", bbox_inches='tight')

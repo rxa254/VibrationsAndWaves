@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\topmargin}{0.0in}
+%\setlength{\textwidth}{6.7in}
+%\setlength{\textheight}{8.5in}
+%
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage{mathtools}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{geometry}
+ \geometry{
+ letterpaper,
+ textwidth=6.5in
+ }
+\usepackage[utf8]{inputenc}
+\usepackage{libertine}
+\usepackage{libertinust1math}
+%\usepackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
+%\usepackage{newtxmath}
+%\usepackage[osf]{ebgaramond}
+\usepackage[T1]{fontenc}
+%\usepackage{palatino}
+\usepackage{microtype}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\textcolor{BlueViolet}{Vibrations and Waves}}
+\fancyhead[LE,RO]{ph2a: 2017}
+\fancyfoot[RE,LO]{\textcolor{Orange}{Caltech}}
+\fancyfoot[LE,RO]{\textcolor{Orange}{Physics, Math, and Astronomy}}
+
+%\input mydefs.tex
+\def\vev#1{\left\langle #1\right\rangle}
+\def\hb{\hfill\break}
+%
+\begin{document}
+%
+\begin{centering}
+\LARGE{QP 2: Triangle Wave Pulse}
+\end{centering}
+\bigskip
+\bigskip
+
+A string with length $L$, tension $T$, and mass per unit length $\mu$,
+is fixed at both ends.
+
+\begin{enumerate}[label=(\alph*)]
+\item (1 point) What is the angular frequency, $\omega_1$,
+of the fundamental mode ($n = 1$) ?
+
+\item (1 point) Write down the most general series equation for the time, $t$, and space, $x$, dependence of the displacement, $y(x,t)$, of the string.
+
+\item (2 points) The string is released at $t = 0$ with the following displacement:
+\[
+y(x , t = 0) = \left.
+\begin{cases}
+\frac{4 x h}{L}, & 0 < x < L/4 \\
+2 h - \frac{4 x h}{L}, & L/4 < x < L/2 \\
+0, & L/2 < x < L
+\end{cases}
+\right\}
+\]
+Write down an expression for the first \textbf{four} coefficients for $A_n$ ($n = 1,2,3,4$) in the Fourier series expansion for $y(x,t)$. Assume the string is released from rest.
+
+\item (2 points) Are any of these first four coefficients zero? If so, describe why. (Hint: think about the symmetry of the eigenmodes with respect to the initial waveform)
+
+\item (2 points) Sketch (by hand) or plot (using software) the approximation for $y(x, t=0)$ obtained by using only the first four terms in the series expansion.
+
+\item (2 points) Sketch or plot the approximation for $y(x,t)$,
+at $t = \pi/\omega_1$, obtained by using only the first four terms in the series expansion.
+
+\end{enumerate}
+\bigskip
+{\color{Sepia} \hrule}
+
+
+
+%\clearpage
+
+
+
+\end{document}

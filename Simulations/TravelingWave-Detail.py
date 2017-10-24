@@ -61,20 +61,11 @@ ax.plot(x,  s, alpha=0.7,
             label = "t = " + str(t))
 
 
-
-# ax.annotate(
-#     '', xy=(0.41, -0.475), xycoords='data',
-#     xytext=(0.545, -0.475), textcoords='data',
-#     arrowprops={'arrowstyle': '<->', 'lw': 2, 'color': 'green'})
-#
-# ax.annotate(
-#     '', xy=(0, 0.75), xycoords='data',
-#     xytext=(tau, 0.75), textcoords='data',
-#     arrowprops={'arrowstyle': '<->', 'lw': 2,
-#     'color': 'xkcd:Strawberry', 'alpha': 0.6})
-#ax.annotate(
-#     r'$sin(n \frac{\pi}{L} x)$', xy=(0.031, -0.2), xycoords='data',
-#     xytext=(0.5, -0.6), textcoords='offset points')
+ax.annotate(
+     r'$y(x,t) = y(x + \Delta x, t + \frac{\Delta x}{v})$',
+     fontsize='x-small',
+     xy=(-0.031, -0.97), xycoords='data',
+     xytext=(0.5, -0.6), textcoords='offset points')
 
 
 ax.set_xlabel('Displacement [L]')

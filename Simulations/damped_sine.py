@@ -68,7 +68,8 @@ ax.annotate(
 ax.annotate(
     '', xy=(0, 0.75), xycoords='data',
     xytext=(tau, 0.75), textcoords='data',
-    arrowprops={'arrowstyle': '<->', 'lw': 2, 'color': 'xkcd:Strawberry', 'alpha': 0.6})
+    arrowprops={'arrowstyle': '<->', 'lw': 2,
+    'color': 'xkcd:Strawberry', 'alpha': 0.6})
 ax.annotate(
     r'damping time ($\tau$)', xy=(0.21, 0.86), xycoords='data',
     xytext=(0.5, -0.6), textcoords='offset points')
@@ -81,5 +82,3 @@ ax.grid(True)
 ax.yaxis.set_ticks(np.arange(-1, 1.1, 0.5))
 ax.legend()
 plt.savefig("damped_sine_wave.pdf", bbox_inches='tight')
-
-

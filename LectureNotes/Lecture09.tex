@@ -1,0 +1,229 @@
+% Lecture for ph2a Caltech 2017: Vibrations and Waves
+\documentclass[pdf, handout, hideothersubsections]{beamer}
+\usepackage{beamerthemeshadow}
+\mode<presentation>
+  {
+    \usefonttheme{structuresmallcapsserif}
+    \usetheme{Darmstadt}
+    \usecolortheme{whale}
+    %\useinnertheme{circles}
+%    \useoutertheme{tree}
+  }
+
+\usepackage{svg}
+\usepackage{multimedia}
+\usepackage{xmpmulti}
+\usepackage{mathtools}
+%\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    pdffitwindow=true,     % window fit to page when opened
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=orange,      % color of internal links 
+    citecolor=green,       % color of links to bibliography
+    filecolor=magenta,     % color of file links
+    urlcolor=blue,         % color of external links
+    pdfstartview={Fit}
+}
+
+% Fonts/encoding
+\renewcommand{\UrlFont}{\tiny}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[sc,medium,raggedright]{titlesec}
+\usepackage{newtxmath}
+%\usepackage{libertine}
+\usepackage[osf]{ebgaramond}
+
+\graphicspath{{Figures/}}
+
+\begin{document}
+\title{Traveling Waves}  
+\author{Caltech: ph2a}
+\date{24 - Oct - 2017}
+
+
+\frame{\titlepage} 
+
+\frame{\frametitle{Table of Contents}\tableofcontents} 
+
+\setbeamerfont{footnote}{size=\tiny}
+
+\section{Summary}
+\begin{frame}
+\frametitle{Waves:}
+\begin{enumerate}
+  \pause
+\item Restoring 'forces' lead to Partial Diff. Eq.
+  \pause
+\item Separable solutions yield ODE.
+  \pause
+\item This gives the wave equation: 
+  $\ddot{y} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2}$
+  \pause
+\item Second order diff. eq. results in oscillatory solutions.
+\pause
+\item Fourier series decomposition of solutions.
+\pause
+\item Including the time dependence can give us \emph{traveling}
+  waves.
+\pause
+\item Examples: light, sound, radio, water, cell phone transmissions,
+  gravitational waves, and gravity waves.
+
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Overview}
+\begin{enumerate}
+\pause
+\item Standing wave solutions are super-position of forward and
+  backward traveling wave solutions.
+\pause
+\item Propagation of a pulse is governed by the \emph{wave equation}
+\pause
+\item Relationship between space and time arguments determines
+  direction of propagation of the wave.
+
+\end{enumerate}
+\end{frame}
+
+
+\section{Standing Waves}
+\begin{frame}
+\frametitle{The Wave Equation}
+\begin{block}{The Wave Equation}
+\centering
+$ \frac{\partial^2 y}{\partial t^2} = \frac{T}{\mu} \frac{\partial^2 y}{\partial x^2}$
+\end{block}
+\pause
+\begin{alignat}{2}
+\frac{d^2 g}{dt^2} &= \omega^2 g  &\quad g(t) &= C_1 cos(\omega t) \\
+\frac{d^2 f}{dx^2} &= -k^2 f &\quad f(x) &= A cos(k x) + B
+sin(k x) 
+\end{alignat}
+\pause
+where the velocity of the wave, $v \equiv \sqrt{\frac{T}{\mu}}$,
+$\frac{\omega}{2 \pi}$ is the frequency, and $k \equiv \omega / v$ is
+called the 'wave number'. For the wavelength of the wave, we use the
+symbol $\lambda \equiv \frac{2 \pi}{k}$.
+\end{frame}
+
+\begin{frame}
+\frametitle{Impose the Boundary Conditions}
+\begin{centering}
+\includegraphics[width=0.7\textwidth]{../../Simulations/modes_of_string.pdf}
+\end{centering}
+    \begin{enumerate}
+    \item $f(x) = 0$ for $x \in \{0, L\} \implies$
+      \pause
+    \item $sin(k L) = 0$ for any and all t, and $A = 0$
+      \pause
+    \item so $k_n L = n \pi$ or $k_n = n \frac{\pi}{L}$
+      \pause
+    \item and $y(x, t) = A_n cos(\omega_n t) sin(k_n x)$
+    \end{enumerate}
+-- \href{http://www.baudline.com/}{Baudline} spectral analysis of
+guitar, java string:
+\end{frame}
+
+
+
+\section{Traveling Waves}
+\begin{frame}
+\frametitle{Traveling (Progressive) Waves}
+\pause
+We can now use the trigonometric identity:
+\begin{equation}
+sin(\theta + \phi) + sin(\theta - \phi) = 2 sin(\theta) cos(\phi) 
+\end{equation} \pause
+to rewrite our general solution as:
+\begin{align}
+y(x, t) &= A_n cos(\omega_n t) sin(n \frac{\pi}{L} x) \\
+        &= \frac{A_n}{2} \bigg[sin(k_n x - \omega_n t)  + sin(k_n x + \omega_n t)\bigg]
+\label{eq:genstand}
+\end{align}
+\pause
+with $k_n = n \pi/L$, $v = \frac{T}{\mu}$, and $\omega_n = n v \pi/L$,
+\pause
+where each term is a \emph{traveling} wave. \\
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Traveling Wave: Animation}
+\begin{columns}
+  \begin{column}{0.4\textwidth}
+    \centering
+    \includegraphics[height=5cm]{travwaves.pdf}
+    % \movie[externalviewer, showcontrols=true, poster,
+    % width=4cm]{}{../../Simulations/travelling_wave.mp4}
+  \end{column}
+\begin{column}{0.6\textwidth}
+Questions:
+\begin{enumerate}
+\item The wave travels with a velocity $v$ in x-direction. What is the
+  velocity of the individual points?
+\item Do the points exhibit simple harmonic motion?
+\item Do all of the points move with the same frequency?
+\item Do all of the points move with the same amplitude?
+\end{enumerate}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Traveling Waves: Details}
+Let's examine Eq.~\ref{eq:genstand} in more detail:
+\pause
+\includegraphics[width=\textwidth]{../../Simulations/detail-trav.pdf}
+\pause
+similarly, $sin(k_n x + \omega_n t)$ represents a wave traveling to
+the left.
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Properties of Traveling Waves}
+\begin{enumerate}
+\item Any value of $k = 2 \pi / \lambda$ and $\omega = k v$ are allowed. 
+\pause
+\item Infinite extent in space and time. No boundaries (in principle).
+\pause
+\item Principle of Superposition still applies: sum of traveling waves
+  satisfies the wave equation.
+\pause
+\item Standing waves can be decomposed into a sum of traveling waves.
+\pause
+\item Traveling waves carry momentum and energy? How do we
+  measure/calculate this?
+\end{enumerate}
+\end{frame}
+
+
+\section{Summary}
+\begin{frame}
+\frametitle{Summary}
+\begin{enumerate}
+\pause
+\item Standing wave solutions are super-position of forward and
+  backward traveling wave solutions.
+
+\item Propagation of a pulse is governed by the \emph{wave equation}
+
+\item Relationship between space and time arguments determines
+  direction of propagation of the wave.
+
+\item Next: examine properties of air to examine sound waves and
+  musical instruments (boundary conditions).
+
+\end{enumerate}
+
+\end{frame}
+
+\end{document}
+

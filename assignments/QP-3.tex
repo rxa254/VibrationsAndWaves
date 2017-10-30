@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\topmargin}{0.0in}
+%\setlength{\textwidth}{6.7in}
+%\setlength{\textheight}{8.5in}
+%
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{geometry}
+ \geometry{
+ letterpaper,
+ textwidth=6.5in
+ }
+\usepackage[utf8]{inputenc}
+%\usepackage{libertine}
+%\usepackage{libertinust1math}
+\usepackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
+%\usepackage{newtxmath}
+%\usepackage[osf]{ebgaramond}
+\usepackage[T1]{fontenc}
+%\usepackage{palatino}
+\usepackage{microtype}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\textcolor{BlueViolet}{Vibrations and Waves}}
+\fancyhead[LE,RO]{ph2a: 2017}
+\fancyfoot[RE,LO]{\textcolor{Orange}{Caltech}}
+\fancyfoot[LE,RO]{\textcolor{Orange}{Physics, Math, and Astronomy}}
+
+%\input mydefs.tex
+\def\vev#1{\left\langle #1\right\rangle}
+\def\hb{\hfill\break}
+%
+\begin{document}
+%
+\begin{centering}
+\LARGE{QP 3: The Energy in the Waves}
+\end{centering}
+\bigskip
+\bigskip
+
+We want to show that the total energy of a string is the sum of the energies of each normal mode. The string has a length $L$ and is fixed at both ends.
+
+\begin{enumerate}[label=(\alph*)]
+\item (2 pts)
+Consider a single normal mode with $\lambda_n = 2 L/n$. Take a time $t$ when the string is unstretched and all the energy is in the kinetic energy. Assuming that the mode has a maximum amplitude at $t = 0$, at what time is all the energy in the kinetic energy? Write down an expression for the total kinetic energy and evaluate it at this time.
+
+\item (2 pts)
+Assuming all of the initial phases $\phi_n = 0$, write down the general expression for an arbitrary disturbance on the string (including all possible modes).
+
+\item (2 pts)
+Write down an expression for the total kinetic energy for this disturbance.
+
+\item (2 pts)
+Noting that the integral will be over common terms and cross terms, use Fourier analysis (i.e. orthogonality of the eigenfunctions) to show that the result will be a sum of the individual kinetic energies for each mode.
+
+\end{enumerate}
+\bigskip
+{\color{Sepia} \hrule}
+
+
+
+%\clearpage
+
+
+
+\end{document}

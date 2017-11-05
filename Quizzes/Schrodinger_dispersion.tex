@@ -1,0 +1,52 @@
+% \documentclass[10pt]{article}
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage[margin=1in]{geometry}
+% \setlength\parindent{0pt}
+%
+% \begin{document}
+% \noindent
+
+\section{Dispersion of Matter Waves}
+An equation which is closely related to the wave equation is the Schrodinger equation:
+
+$$i\frac{\partial\psi(x,t)}{\partial t}=-\frac{1}{2m}\frac{\partial^{2}\psi(x,t)}{\partial x^{2}},$$
+
+where $m$ is a positive real number. Here $\psi(x,t)$ is a \it wavefunction \rm that describes the movement of a quantum mechanical matter wave with mass $m$. Much like the ordinary wave equation, the Schrodinger equation also admits traveling wave solutions of the form
+
+$$\psi_{p}(x,t)=e^{ip\left(x-\frac{pt}{2m}\right)},$$
+
+where $p\in\mathbb{R}$ is an arbitrary real number.
+
+\begin{enumerate}[label=\alph*)]
+\item (3 pts) What is the dispersion relation for the wave solutions of the Schrodinger equation? Give a brief sketch.
+
+
+\item (2 pts) What is the phase velocity of these traveling waves?
+
+\item (3 pts) Let us consider beats formed using a superposition of different wave solutions with similar frequencies. Let $p_{0}$ be a given real number. Consider a superposition of the form
+
+$$\xi(x,t)=\psi_{p_{0}-\Delta p}(x,t)+\psi_{p_{0}}(x,t)+\psi_{p_{0}+\Delta p}(x,t),$$
+
+where $\Delta p$ is some small number such that $\Delta p\ll p_{0}$. To linear order in $\Delta p$, show that we have
+
+$$\xi(x,t)=\left(2\cos\left[\left(x-\frac{p_{0}}{m}t\right)\Delta p\right]+1\right)\psi_{p_{0}}(x,t).$$
+\\
+
+The previous result shows that, just like in the classical phenomenon of beats, a superposition of traveling matter waves with similar frequencies will give you an “envelope” function that modulates $\psi_{k_{0}}$. A reasonable definition of the group velocity in this case would be the velocity of the envelope function.
+
+
+\item (2 pts) What is the group velocity of the superposition? Does this match up with what you expected from your knowledge of group velocities for classical waves?
+\\
+
+As an aside, the values of p actually correspond to the momentum of the quantum mechanical wave. With this interpretation, you may find your expression for the group velocity to be very familiar.
+
+% \item (2 pts) Now consider these waves to be trapped in a box from $x=0$ to $x=L$. Inside the box, a right-moving wave will bounce off the wall to become a left-moving wave and vice versa. The waves inside the box must therefore be a general combination of a left-moving wave and a right-moving wave which will form a standing wave:
+%
+% $$f(x,t)=Ae^{ip\left(x-\frac{pt}{2m}\right)}+Be^{-ip\left(x+\frac{pt}{2m}\right)}.$$
+%
+% Since the particle cannot exit the box, quantum mechanics requires that the above superposition go to zero at the boundaries, i.e., $f(x=0,t)=0$ and $f(x=L,t)=0$. Up to an overall constant, find all the linear combinations which form valid quantum mechanical standing waves. What are the allowed values of $p$?
+\end{enumerate}
+
+ % Notice that the act of putting the waves into a box severely restricts the possible values of $p$ the standing wave is allowed to have. The previously unrestricted value of $p$ is now reduced to a discrete set of values. Thus we say that the act of restricting the wave \it quantizes \rm its momentum (and hence also energy). This is a very generic phenomenon in quantum mechanics.
+%\end{document}

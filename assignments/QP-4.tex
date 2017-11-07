@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\topmargin}{0.0in}
+%\setlength{\textwidth}{6.7in}
+%\setlength{\textheight}{8.5in}
+%
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{geometry}
+ \geometry{
+ letterpaper,
+ textwidth=6.5in
+ }
+\usepackage[utf8]{inputenc}
+%\usepackage{libertine}
+%\usepackage{libertinust1math}
+\usepackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
+%\usepackage{newtxmath}
+%\usepackage[osf]{ebgaramond}
+\usepackage[T1]{fontenc}
+%\usepackage{palatino}
+\usepackage{microtype}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\textcolor{BlueViolet}{Vibrations and Waves}}
+\fancyhead[LE,RO]{ph2a: 2017}
+\fancyfoot[RE,LO]{\textcolor{Orange}{Caltech}}
+\fancyfoot[LE,RO]{\textcolor{Orange}{Physics, Math, and Astronomy}}
+
+%\input mydefs.tex
+\def\vev#1{\left\langle #1\right\rangle}
+\def\hb{\hfill\break}
+%
+\begin{document}
+%
+\begin{centering}
+\LARGE{QP 4: Interstellar Dispersion}
+\end{centering}
+\bigskip
+\bigskip
+
+Several Nobel prizes in physics have been given out for discoveries made with pulsars. A neutron star is an extremely dense remnant of a star, after that star has burned up all the nuclear fuel that makes it shine. It has a mass comparable to the mass of the Sun, but occupies a space about the size of Pasadena.
+A pulsar is a rapidly spinning neutron star; they may spin as fast as 1000 times per second.
+Pulsars emit extremely short bursts of radiation at regular intervals, every
+time they spin around. We see these as periodic radio signals with a period
+equal to the spin period of the pulsar.
+Consider now a single burst of radio emission from a pulsar at a distance
+D$ = 3 \times 10^{20}$\,m away from us. The radio signal from the pulsar has to
+propagate through interstellar space before reaching us. That interstellar
+space is filled with a plasma; a gas of ionized atoms with an electron density
+$n_e = 2 \times 10^{-8}~\mathrm{m}^{-3}$.
+As you know, electromagnetic waves propagate through a vacuum at the
+speed of light, but if they propagate through a medium, they may travel a
+bit slower. Electromagnetic waves in a plasma have a dispersion relation,
+\begin{equation}
+\omega^2 = \omega_p^2 + k^2 c^2
+\end{equation}
+connecting the (angular) frequency, $\omega$, of the wave and its wavenumber, $k = 2 \pi / \lambda$, where $\lambda$ is the wavelength. Here, $\omega_p$ is the (angular) "plasma frequency" given by:
+\begin{equation}
+\omega_p^2 = \frac{n_e e^2}{m_e \epsilon_0}
+\end{equation}
+where $e = 1.6 \times 10^{-19} C$ is the electron charge, $m_e = 9.11 \times 10^{-31}$~kg is the electron mass, and $\epsilon_0 = 8.85 \times 10^{-12}$~F/m is the permittivity of the vacuum.
+\begin{enumerate}[label=(\alph*)]
+\item (2 pts)
+Evaluate the plasma frequency, $\omega_p$, for interstellar space.
+
+\item (2 pts)
+Write down an expression for the phase velocity, $v_{ph}$, in terms of the
+wavenumber, $k$.
+
+\item (2 pts)
+Write down an expression for the group velocity, $v_{g}$, in terms of the
+wavenumber, $k$.
+
+\item (2 pts)
+Suppose the pulsar emits simultaneous pulses centered at two different
+(angular) frequencies: $\omega_1 = 1$\,GHz and $\omega_2 = 2$\,GHz.
+These will now propagate through interstellar space at slightly
+different velocities. Calculate the difference in the arrival times of these
+two pulses.
+
+\end{enumerate}
+\bigskip
+{\color{Sepia} \hrule}
+
+
+
+%\clearpage
+
+
+
+\end{document}

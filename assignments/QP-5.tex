@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+%\setlength{\oddsidemargin}{0in}
+%\setlength{\topmargin}{0.0in}
+%\setlength{\textwidth}{6.7in}
+%\setlength{\textheight}{8.5in}
+%
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{geometry}
+ \geometry{
+ letterpaper,
+ textwidth=6.5in
+ }
+\usepackage[utf8]{inputenc}
+%\usepackage{libertine}
+%\usepackage{libertinust1math}
+\usepackage[libertine,cmintegrals,cmbraces,vvarbb]{newtxmath}
+%\usepackage{newtxmath}
+%\usepackage[osf]{ebgaramond}
+\usepackage[T1]{fontenc}
+%\usepackage{palatino}
+\usepackage{microtype}
+
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,LO]{\textcolor{BlueViolet}{Vibrations and Waves}}
+\fancyhead[LE,RO]{ph2a: 2017}
+\fancyfoot[RE,LO]{\textcolor{Orange}{Caltech}}
+\fancyfoot[LE,RO]{\textcolor{Orange}{Physics, Math, and Astronomy}}
+
+%\input mydefs.tex
+\def\vev#1{\left\langle #1\right\rangle}
+\def\hb{\hfill\break}
+%
+\begin{document}
+%
+\begin{centering}
+\LARGE{QP 5: Doppler Effect}
+\end{centering}
+\bigskip
+\bigskip
+
+There are
+(\href{http://www.caltech.edu/news/engineers-build-robot-drone-mimics-bat-flight-53794}{robotic})
+bats on the Caltech campus. \\
+
+Let us assume that this new bat emits its calls at 17\,kHz, too high of a frequency for any of the faculty
+to hear, but audible to sophomores. During testing, let us assume that the bat
+flies back and forth along the Olive Walk. At $t = 0$ the bat launches from the Athaneum.
+\begin{equation}
+x_{\rm bat}(t) = d_{\rm Ath} cos(\omega t)
+\end{equation}
+
+\begin{enumerate}[label=(\alph*)]
+\item (2 pts)
+Standing in the middle of the Olive Walk (at $x_{\rm bat} = 0$),
+you hear the bat sound change frequency as it approaches you and then passes by.
+Sketch the frequency you would hear as a function of time for 1 period of bat flight (starting from the Ath and returning to the Ath). Mark clearly when the maxima and minima of observed frequency would occur.
+
+\item (2 pts)
+Suppose that the \emph{peak-to-peak} frequency modulation you hear is 2\,kHz. Find the
+maximum velocity of the bat.  Given that the total distance, $d_{\rm Ath}$, from the turtle pond to the Athaneum
+is 300\,m, how long does it take the bat to make one round trip? Assume the speed of sound is 333\,m/s.
+
+\item (2 pts)
+Suppose that one of the emeritus faculty comes rocketing out of the Ath at high speed on a Segway.
+Assume that the bat narrowly misses this person, but that they travel on nearly colinear paths. What is the minimum speed of the Segway such that the bat's call becomes audible to this faculty member (assuming an upper hearing range of 15\,kHz) if they pass each other as the bat reaches its maximum velocity?
+
+\end{enumerate}
+\bigskip
+{\color{Sepia} \hrule}
+
+
+
+%\clearpage
+
+
+
+\end{document}

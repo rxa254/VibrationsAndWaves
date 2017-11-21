@@ -1,0 +1,242 @@
+% Lecture for ph2a Caltech 2017: Vibrations and Waves
+\documentclass[pdf, hideothersubsections]{beamer}
+\usepackage{beamerthemeshadow}
+\mode<presentation>
+  {
+    \usefonttheme{structuresmallcapsserif}
+    \usetheme{Darmstadt}
+    \usecolortheme{whale}
+    %\useinnertheme{circles}
+%    \useoutertheme{tree}
+  }
+
+\usepackage{svg}
+\usepackage{xmpmulti}
+\usepackage{mathtools}
+%\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    pdffitwindow=true,     % window fit to page when opened
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=orange,      % color of internal links 
+    citecolor=green,       % color of links to bibliography
+    filecolor=magenta,     % color of file links
+    urlcolor=blue,         % color of external links
+    pdfstartview={Fit}
+}
+
+% Fonts/encoding
+\renewcommand{\UrlFont}{\ttfamily\tiny}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[sc,medium,raggedright]{titlesec}
+\usepackage{newtxmath}
+%\usepackage{libertine}
+\usepackage[osf]{ebgaramond}
+
+\graphicspath{{Figures/}}
+
+\begin{document}
+\title{Interference}  
+\author{Caltech: ph2a}
+\date{21 - Nov - 2017}
+
+
+\frame{\titlepage} 
+
+\frame{\frametitle{Table of Contents}\tableofcontents} 
+
+\setbeamerfont{footnote}{size=\tiny}
+
+\section{Overview}
+\begin{frame}
+\frametitle{Overview:}
+\begin{enumerate}
+  \pause
+\item Interference of waves leads to many phenomena: audio feedback
+  for musicians, dead spots in cell reception, rogue waves in the
+  ocean, satellite dishes, etc.
+\pause
+\item NASA Deep Space Network: communication with satellites
+\pause
+\item Optical Interferometry/Astronomy: Early Warnings for Extinction
+  Level Asteroids
+\pause
+\item Time-tagged Cell phone accelerometer signals for early EQ warning
+
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Satellite Dishes}
+\includegraphics[width=0.99\textwidth]{Canberra_Deep_Space_Communication_Complex.jpg}
+
+\end{frame}
+
+
+\section{Interference of Two Waves}
+\begin{frame}
+\frametitle{Huygen's Principle}
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+    \includegraphics[width=0.99\textwidth]{Huygen.pdf}
+  \end{column}
+
+  \begin{column}{0.7\textwidth}
+    \begin{itemize}
+    \item A \emph{Wavefront} is a surface over which an optical wave has a
+      constant phase.
+      \pause
+    \item In 3D, a point source emits spherical waves; i.e. it will emit
+      spherical wavefronts.
+      \pause
+    \item For 2D, the wavefronts are circles.
+      \pause
+    \item Huygen's principle: the propagation of an arbitrary wave can be
+      understood by imagining that each piece of a wavefront emits a
+      secondary spherical wavelet. \pause The coherent superpostion of
+      these wavelets determines the new wavefront.
+    \end{itemize}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Interference of Two Waves}
+Let us consider two point sources of some kind of wave (need not be
+electromagnetic):
+\begin{columns}
+
+  \begin{column}{0.4\textwidth}
+    \includegraphics[width=0.99\textwidth]{TwoSource.jpg}
+  \end{column}
+
+  \begin{column}{0.6\textwidth}
+\begin{align*}
+\Psi &= \action<+->{A(r_1) e^{i (k r_1 - \omega t)} + A(r_2) e^{i (k r_2 - \omega t)}\\}
+     \action<+->{&\simeq A \Big[e^{i (k r_1 - \omega t)} + e^{i (k r_2 - \omega t)}\Big] \\}
+     \action<+->{&= A e^{i (k r - \omega t)} e^{i k (r_2 -
+                   r_1)} \\}
+\action<+->{|\Psi|^2 &= 4 |A|^2 cos^2[k (r_2 - r_1)] \\}
+\action<+->{|\Psi|^2 &= 4 |A|^2 cos^2[2 \pi \frac{d}{\lambda} \sin{\theta}]}
+\end{align*}
+\pause
+where $\delta \phi$ is the phase \emph{difference}, $d$ is the average
+distance from the slits to the source, and $\theta$ is the angle to
+the point on the screen.
+  \end{column}
+
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{2 Sources}
+
+\centering
+\includegraphics[width=0.85\textwidth]{../../Simulations/IMGintpattern_f5000_n2.png}
+
+\end{frame}
+
+
+\section{Interference of N Sources}
+\begin{frame}
+\frametitle{3 Sources}
+
+\centering
+\includegraphics[width=0.85\textwidth]{../../Simulations/IMGintpattern_f5000_n3.png}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{N Sources}
+
+\centering
+\includegraphics[width=0.99\textwidth]{../../Simulations/IMGintpattern_f5000_n9.png}
+
+
+\end{frame}
+%\section{Antennae}
+
+\section{Interferometers}
+\begin{frame}
+\frametitle{Michelson Interferometer}
+\begin{columns}
+  \begin{column}{0.35\textwidth}
+    \includegraphics[width=0.99\textwidth]{Michelson.jpg}
+  \end{column}
+
+  \begin{column}{0.65\textwidth}
+    \begin{enumerate}
+    \item Developed by Michelson in $\sim1880$ to look for the
+      `luminiferous ether'
+      \pause
+    \item Illuminated by a single, `mono-chromatic' light source
+      \pause
+    \item Able to measure sub-nanometer displacements by $\sim1890$
+      \pause
+    \item Best Michelson interferometers today can measure
+      $\sim10^{-16}$\,m.
+      \pause
+    \item Let's use our knowledge of superposition and interference to
+      work out the sensitivity for two cases: \pause
+      (1) the laser has truly one frequency, $\nu$ \pause
+      and (2) the laser has a finite linewidth $\delta \nu$.
+      
+    \end{enumerate}
+  \end{column}
+\end{columns}
+\end{frame}
+
+\section{Optical Resonator}
+\begin{frame}
+\frametitle{The Fabry-Perot Interferometer}
+Q: How can we determine the linewdith of a light (wave) source using
+something other than a Michelson interferometer?\pause
+A: We can use a SHO! Since we understand how the Bode Plot works for a
+SHO, we can use it to characterize the laser. \pause
+
+\begin{enumerate}
+\item A Fabry-Perot resonator consists of two mirrors separated by a
+  distance $L$, each with an \emph{amplitude} reflectivity, $r$.
+\pause
+\item As we did for the single layer anti-reflection coating, we can
+  write down the relationships between all the fields.
+\pause
+\item Assuming that the mirrors are moving very slowly, with respect
+  to the round trip travel time for the light, we can find the
+  quasi-static solution to the fields.
+\pause
+\item Take a few minutes to solve for the fields...
+\end{enumerate}
+\pause
+Now, let's plot it !!
+\end{frame}
+
+
+\begin{frame}
+\frametitle{The Fabry-Perot Interferometer}
+
+\centering
+\includegraphics[width=0.99\textwidth]{../../Simulations/FabryPerot.pdf}
+
+\end{frame}
+
+\section{Summary}
+\begin{frame}
+\frametitle{Summary}
+\begin{itemize}
+  \item Huygen's principle can be used to propagate waves.
+  \item It has not classical foundation, but it makes sense quantum-wise.
+  \item 
+
+  \item 
+  \item 
+
+  \item 
+
+\end{itemize}
+\footnotetext[1]{\url{https://www.khanacademy.org/test-prep/mcat/physical-processes/light-and-electromagnetic-radiation-questions/a/diffraction-and-constructive-and-destructive-interference}}
+\end{frame}
+
+\end{document}
+

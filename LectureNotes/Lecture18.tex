@@ -37,9 +37,9 @@
 \graphicspath{{Figures/}}
 
 \begin{document}
-\title{Interference}  
+\title{Interference \& Diffraction}  
 \author{Caltech: ph2a}
-\date{21 - Nov - 2017}
+\date{28 - Nov - 2017}
 
 
 \frame{\titlepage} 
@@ -48,35 +48,20 @@
 
 \setbeamerfont{footnote}{size=\tiny}
 
-\section{Overview}
 \begin{frame}
-\frametitle{Overview:}
-\begin{enumerate}
-  \pause
-\item Interference of waves leads to many phenomena: audio feedback
-  for musicians, dead spots in cell reception, rogue waves in the
-  ocean, satellite dishes, etc.
-\pause
-\item NASA Deep Space Network: communication with satellites
-\pause
-\item Optical Interferometry/Astronomy: Early Warnings for Extinction
-  Level Asteroids
-\pause
-\item Time-tagged Cell phone accelerometer signals for early EQ warning
+\frametitle{Feynman}
 
-\end{enumerate}
-\end{frame}
+\centering
+``No one has ever been able to define the difference between
+interference and diffraction satisfactorily.'' \\
 
-\begin{frame}
-\frametitle{Satellite Dishes}
-\includegraphics[width=0.99\textwidth]{Canberra_Deep_Space_Communication_Complex.jpg}
+-Feynman Lectures, 30-1
 
 \end{frame}
 
-
-\section{Interference of Two Waves}
+\section{Interference of Two Sources}
 \begin{frame}
-\frametitle{Huygen's Principle}
+\frametitle{Huygen's Principle: Review}
 \begin{columns}
   \begin{column}{0.3\textwidth}
     \includegraphics[width=0.99\textwidth]{Huygen.pdf}
@@ -86,15 +71,16 @@
     \begin{itemize}
     \item A \emph{Wavefront} is a surface over which an optical wave has a
       constant phase.
-      \pause
+
     \item In 3D, a point source emits spherical waves; i.e. it will emit
       spherical wavefronts.
-      \pause
+
     \item For 2D, the wavefronts are circles.
-      \pause
+
     \item Huygen's principle: the propagation of an arbitrary wave can be
       understood by imagining that each piece of a wavefront emits a
-      secondary spherical wavelet. \pause The coherent superpostion of
+      secondary spherical wavelet.
+      The coherent superpostion of
       these wavelets determines the new wavefront.
     \end{itemize}
   \end{column}
@@ -120,7 +106,7 @@ electromagnetic):
 \action<+->{|\Psi|^2 &= 4 |A|^2 cos^2[k (r_2 - r_1)] \\}
 \action<+->{|\Psi|^2 &= 4 |A|^2 cos^2[2 \pi \frac{d}{\lambda} \sin{\theta}]}
 \end{align*}
-\pause
+
 where $\delta \phi$ is the phase \emph{difference}, $d$ is the average
 distance from the slits to the source, and $\theta$ is the angle to
 the point on the screen.
@@ -147,6 +133,7 @@ the point on the screen.
 
 \end{frame}
 
+
 \begin{frame}
 \frametitle{N Sources}
 
@@ -156,61 +143,96 @@ the point on the screen.
 see animations...
 
 \end{frame}
-%\section{Antennae}
 
-\section{Interferometers}
 \begin{frame}
-\frametitle{Michelson Interferometer}
-\begin{columns}
-  \begin{column}{0.35\textwidth}
-    \includegraphics[width=0.99\textwidth]{Michelson.jpg}
-  \end{column}
+\frametitle{N Sources}
 
-  \begin{column}{0.65\textwidth}
-    \begin{enumerate}
-    \item Developed by Michelson in $\sim1880$ to look for the
-      `luminiferous ether'
-      \pause
-    \item Illuminated by a single, `mono-chromatic' light source
-      \pause
-    \item Able to measure sub-nanometer displacements by $\sim1890$
-      \pause
-    \item Best Michelson interferometers today can measure
-      $\sim10^{-16}$\,m.
-      \pause
-    \item Let's use our knowledge of superposition and interference to
-      work out the sensitivity for two cases: \pause
-      (1) the laser has truly one frequency, $\nu$ \pause
-      and (2) the laser has a finite linewidth $\delta \nu$.
-      
-    \end{enumerate}
-  \end{column}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=0.99\textwidth]{diffraction_grating_geometry.jpg}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+Constructive Interference: maxima at $m \lambda = d sin \theta$, where
+$m = ..., -2, -1, 0, 1, 2,...$
+
+Sketch of Derivation:\\
+$\Psi(r, \theta, t) = A(r) e^{-i \omega t} \sum_{p=-N/2}^{N/2} e^{i k
+  r_p}$ \\
+$r_2 - r_1 = d \sin{\theta}$ \\
+$r_3 - r_1 = 2 d \sin{\theta}$ \\
+$r_4 - r_1 = 3 d \sin{\theta}$ \\
+So, for the angle between maxima $\sin{\theta} = \lambda / d$. Or, for
+the case where the screen is far away, $\theta \simeq \lambda / d$.
+\end{column}
+
 \end{columns}
 \end{frame}
 
-\section{Optical Resonator}
+\begin{frame}
+\frametitle{N Sources}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=0.99\textwidth]{f30-01_tc_big.pdf}
+\end{column}
+
+\begin{column}{0.5\textwidth}
+\begin{enumerate}
+\item The wave from each slit has approximately the same amplitude, $A$.
+\pause
+\item The phase, $\phi$, from each slit is slightly retarded with respect to
+  the adjacent one.
+\pause
+\item From trigonometry, we can see that $A = 2 r \sin{\phi/2}$
+\pause
+\item The angle $OQT = n \phi$, and so $A_R = 2 r \sin{n \phi / 2}$
+\pause
+\item So the amplitude $A_R = A \frac{\sin{n \phi /2}}{\sin{\phi/2}}$
+    and
+\pause
+\item The intensity $I = I_0 \frac{\sin^2{n \phi /2}}{\sin^2{\phi/2}}$
+
+\end{enumerate}
+\end{column}
+
+\end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{N Sources}
+
+\centering
+\includegraphics[width=0.85\textwidth]{../../Simulations/Nslits.pdf}
+
+
+\end{frame}
+
+%\section{Antennae}
+
+\section{Interferometers}
+
+\section{Optical Resonator / Etalon}
 \begin{frame}
 \frametitle{The Fabry-Perot Interferometer}
-Q: How can we determine the linewdith of a light (wave) source using
-something other than a Michelson interferometer?\pause
-A: We can use a SHO! Since we understand how the Bode Plot works for a
-SHO, we can use it to characterize the laser. \pause
-
+... review of last week's calculation...
 \begin{enumerate}
 \item A Fabry-Perot resonator consists of two mirrors separated by a
   distance $L$, each with an \emph{amplitude} reflectivity, $r$.
-\pause
+
 \item As we did for the single layer anti-reflection coating, we can
   write down the relationships between all the fields.
-\pause
+
 \item Assuming that the mirrors are moving very slowly, with respect
   to the round trip travel time for the light, we can find the
   quasi-static solution to the fields.
-\pause
+
 \item Take a few minutes to solve for the fields...
 \end{enumerate}
-\pause
-Now, let's plot it !!
+
+As with the mass-spring and electrical (RLC) SHO, the optical
+(laser-mirror) resonator also has a resonant frequency and a Q. Why?
 \end{frame}
 
 
@@ -226,18 +248,19 @@ Now, let's plot it !!
 \begin{frame}
 \frametitle{Summary}
 \begin{itemize}
-  \item Huygen's principle can be used to propagate waves.
-  \item It has not classical foundation, but it makes sense quantum-wise.
   \item The interference of waves can be understood using superposition
-
   \item Multiple wave interference is a natural extension of this method
   \item Interferometers are precise measurement tools: can convert
     optical phase changes into measureable power.
 
-  \item Next: diffraction.
+  \item A diffraction grating gives a multi-slit diffraction pattern.
+  \item For N slits, the angle between diffraction maxima is the
+    wavelength over the slit spacing.
+  \item By symmetry, the \emph{resolving} power (in radians) of a set
+    of coherent receivers is set by the size of the receiver array.
 
 \end{itemize}
-\footnotetext[1]{\url{https://www.khanacademy.org/test-prep/mcat/physical-processes/light-and-electromagnetic-radiation-questions/a/diffraction-and-constructive-and-destructive-interference}}
+\footnotetext[1]{\url{https://readingfeynman.org/2014/07/14/diffraction-gratings}}
 \end{frame}
 
 \end{document}

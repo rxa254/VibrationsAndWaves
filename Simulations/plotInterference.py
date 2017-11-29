@@ -29,7 +29,7 @@ makevideo = 1
 f  = 5000 # frequency (Hz)
 c  = 1500 # sound speed (m/s)
 l  = c / f # wavelength (m)
-dx = l * 1.5 # element separation (m)
+dx = l * 15 # element separation (m)
 
 n  = args.Nsources[0] # number of elements
 k  = 2 * np.pi*f/c # wavenumber
